@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CN from "classnames";
 import { PostItem} from "../../components/postItem/PostItem.component";
 import {useTranslation} from "../../hook";
-import {Button} from "../../components/button/button.component";
+import {Button} from "../../components/button/Button.component";
 import {ArrowRight} from "phosphor-react";
 import React from "react";
 import {useNavigate} from "react-router";

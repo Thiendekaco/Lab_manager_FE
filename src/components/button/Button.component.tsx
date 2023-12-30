@@ -13,12 +13,13 @@ interface Props extends ThemeProps {
   isRadius ?: boolean,
   size : 'sm'|'md'|'lg'|'xs',
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  borderColor ?: string
+  borderColor ?: string,
+  right ?: boolean
 }
 
 
 function Component (props: Props){
-  const { className, icon, isBorder, isRadius, size, } = props
+  const { className, right, icon, isBorder, isRadius, size, } = props
   const _icon = useMemo(()=>icon || <div className={'_button-icon'} > <ArrowRight  size={27} className={'_option-icon'} weight={"bold"} color={"#FFFFFF"}/></div>, [icon])
 
 
@@ -26,9 +27,10 @@ function Component (props: Props){
   return(
     <button
       className={CN(className, {
-        '_button-radius': isRadius,
-        '_button-retangle': !isRadius,
-        '_button-border': isBorder
+        '-button-radius': isRadius,
+        '-button-retangle': !isRadius,
+        '-button-border': isBorder,
+        '-right' : right
       }, size)}
       onClick={props.onClick}
     >
@@ -40,13 +42,14 @@ function Component (props: Props){
 
 export const Button_nonAnimation = styled(Component)<Props>(({theme: {token}, backgroundColor, borderColor} :Props) => {
   return({
-      backgroundColor : backgroundColor || token.colorBgGreen,
-      border : '1px solid',
-      borderColor: borderColor || "transparent",
-      display: 'block',
-      cursor: 'pointer',
-      position: "relative",
-      '&._button-radius': {
+    backgroundColor : backgroundColor || token.colorBgGreen,
+    border : '1px solid',
+    borderColor: borderColor || "transparent",
+    display: 'block',
+    cursor: 'pointer',
+    position: "relative",
+
+      '&.-button-radius': {
         borderRadius: '50%',
       },
       '&.sm': {
@@ -65,16 +68,20 @@ export const Button_nonAnimation = styled(Component)<Props>(({theme: {token}, ba
         width: 100,
         height: 100
       },
-      '&._button-icon:hover' :  {
+      '&.-button-icon:hover' :  {
         transition: 'all .4s cubic-bezier(.65,0,.35,1)',
         position: "relative"
       },
-      '&._button-icon': {
+      '&.-button-icon': {
         position: "relative",
       },
 
-      '&._button-border': {
+      '&.-button-border': {
         border: '2px solid'
+      },
+
+      '&.-right': {
+        left: '80%'
       }
 
   })

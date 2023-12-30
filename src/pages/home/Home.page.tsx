@@ -5,7 +5,7 @@ import styled, {useTheme} from "styled-components";
 import { urlYtbHome } from "../../constants/url.constant";
 import CN from "classnames";
 import React, {useCallback, useContext, useState} from "react";
-import {Button} from "../../components/button/button.component";
+import {Button} from "../../components/button/Button.component";
 import {Carousel} from "../../components/carousel/Carousel.component";
 import { ContentType } from "../../types";
 import {ArrowLeft, ArrowRight} from "phosphor-react";

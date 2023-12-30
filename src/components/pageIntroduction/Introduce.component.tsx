@@ -2,7 +2,7 @@ import {ContentType, ThemeProps} from "../../types";
 import  CN  from 'classnames';
 import styled from "styled-components";
 import {useTranslation} from "../../hook";
-import {Button} from "../button/button.component";
+import {Button} from "../button/Button.component";
 import React, {useEffect} from "react";
 import {useNavigate} from "react-router";
 import {fadeRight} from "../../styles/styles.animation";

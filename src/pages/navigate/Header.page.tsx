@@ -70,9 +70,8 @@ export function Component ( { className} : Props) {
   },[])
 
   const eventMousemove = useCallback((event : MouseEvent) => {
-    console.log(mouseLeaveY, mouseLeaveX,'-', event.clientY, event.clientX)
-    if((mouseLeaveX + 1 <= event.clientX  || mouseLeaveX - 1 > event.clientX ) &&
-      (event.clientY >= mouseLeaveY + 40 || event.clientY <= mouseLeaveY)){
+    if((mouseLeaveX + 10 <= event.clientX  || mouseLeaveX - 10 > event.clientX ) &&
+      (event.clientY >= mouseLeaveY + 50 || event.clientY <= mouseLeaveY)){
       setIsHover(false)
     }
     if(isHover){

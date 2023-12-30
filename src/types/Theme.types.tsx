@@ -23,8 +23,8 @@ export interface GlobalToken {
   colorTextRed: string,
   colorTextLight: string,
   colorTextDark: string,
-  colorTextError: string
-
+  colorTextError: string,
+  colorTextBlue: string,
 
   colorBgSecondary: string,
   colorBgLight: string,

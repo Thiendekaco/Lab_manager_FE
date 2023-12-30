@@ -13,9 +13,10 @@ export  const THEME_TOKEN_DEFAULT: GlobalToken = {
   colorTextDark: '#160002',
   colorTextError: '#d5413b',
   colorTextRed: '#bf1616',
+  colorTextBlue: '#008482',
 
 
-  colorBgSecondary: '#e1e1e1',
+  colorBgSecondary: '#f5f5f5',
   colorBgLight: '#0078d9',
   colorBgDark: '#0d1117',
   colorBgRed: '#d5413b',

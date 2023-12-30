@@ -1,11 +1,7 @@
 import { Route, Routes} from "react-router";
 import { Navigation } from "../pages/navigate/Naviagation.page";
 import {HomePage} from "../pages/home/Home.page";
-
-
-
-
-
+import { ResearchPage } from "../pages/research/Research.page";
 
 
 const Router = () => {
@@ -17,11 +13,11 @@ const Router = () => {
           {/*<Route path={"headline/*"} element={<Headline />} >*/}
           {/*  /!*<Route path={"postItem"} element={<New />} />*!/*/}
           {/*</Route>*/}
-          {/*<Route path={"/research/*"} element={<Researh />} >*/}
+          <Route path={"research/*"} element={<ResearchPage />} >
           {/*  <Route path={"detail"} element={<DetailResearch />} />*/}
           {/*  <Route path={"modResearch"} element={<ModResearch />} />*/}
-          {/*</ Route>*/}
-        {/*  <Route path={"/laboratories/*"} element={<Laboratories />} >*/}
+          </ Route>
+          {/*<Route path={"laboratories/*"} element={<LaboratoriesPage />} >*/}
         {/*    <Route path={"laboratory/*"} element={<Laboratory />} >*/}
         {/*      <Route path={"member"} element={<Member />} />*/}
         {/*      <Route path={"researchList"} element={<ResearchList />} />*/}

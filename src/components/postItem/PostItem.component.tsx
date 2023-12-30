@@ -5,13 +5,13 @@ import CN from "classnames";
 import {Badge} from "../badge/Badge.component";
 import {useTranslation} from "../../hook";
 import {ScreenContext} from "../../context/Screen.context";
-import {Button} from "../button/button.component";
+import {Button} from "../button/Button.component";
 import {ArrowRight} from "phosphor-react";
 import {fadeInRight, scaleButton} from "../../styles/styles.animation";
 
 
 
-export interface PropsPostInterface extends ThemeProps {
+ interface PropsPostInterface extends ThemeProps {
   content : ContentType
 }
 

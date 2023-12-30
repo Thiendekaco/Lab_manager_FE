@@ -1,6 +1,6 @@
 import { ContentType, ThemeProps } from "../../types";
 import CN from "classnames";
-import {Button} from "../button/button.component";
+import {Button} from "../button/Button.component";
 import React from "react";
 import styled from "styled-components";
 import {ArrowRight, CaretRight} from "phosphor-react";
