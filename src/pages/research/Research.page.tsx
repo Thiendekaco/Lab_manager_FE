@@ -170,7 +170,8 @@ export const ResearchPage = styled(Component)<Props>(({theme : {token}})=>{
     '._research-wrap': {
       display: 'flex',
       flexWrap: 'wrap',
-      marginTop: token.marginXS
+      marginTop: token.marginXS,
+      justifyContent: 'space-between'
     },
 
 

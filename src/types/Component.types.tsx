@@ -19,3 +19,17 @@ export type ResearchType = {
   description ?: string,
   admin : string
 }
+
+export interface ActivityInterface {
+  value: string,
+  image: string
+}
+
+export type LaboratoryType = {
+  image : string,
+  status : 'public' | 'private',
+  name: string,
+  location ?: string,
+  country ?: string,
+  activity ?: ActivityInterface[]
+}

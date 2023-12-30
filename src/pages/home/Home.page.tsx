@@ -2,7 +2,7 @@ import {Theme, ThemeProps} from "../../types";
 import { useTranslation } from "../../hook";
 import { ScreenContext } from "../../context/Screen.context";
 import styled, {useTheme} from "styled-components";
-import { urlYtbHome } from "../../constants/url.constant";
+import { urlYtbHome } from "../../constants/Url.constant";
 import CN from "classnames";
 import React, {useCallback, useContext, useState} from "react";
 import {Button} from "../../components/button/Button.component";

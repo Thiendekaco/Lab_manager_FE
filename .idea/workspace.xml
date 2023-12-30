@@ -5,30 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6679f9e8-d042-49ed-90bf-22c1cafb362e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/banner/Banner.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/button/ButtonIcon.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/collapse/Collapse.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/icon/Automotive.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/icon/Health.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/icon/Medical.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/icon/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/postItem/PostItemResearch.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sideBar/SideBar.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/research/Research.page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/banner/BannerHeader.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/list/ListLaboratory.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratory.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/laboratories/Laboratories.page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/button/button.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/Button.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageIntroduction/Introduce.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageIntroduction/Introduce.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItem.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItem.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemCard.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemCard.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemFooter.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemFooter.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemVideo.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemVideo.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/Theme.constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Theme.constant.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/Headline.home.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Headline.home.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sideBar/SideBar.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/SideBar.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/url.constant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Url.constant.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/Home.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/navigate/Header.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigate/Header.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/research/Research.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/research/Research.page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routers/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/router.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/Component.types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Component.types.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Theme.types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Theme.types.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -155,10 +145,25 @@
       <workItem from="1703856499518" duration="8799000" />
       <workItem from="1703906175122" duration="1722000" />
       <workItem from="1703920095680" duration="14376000" />
+      <workItem from="1703936698371" duration="91000" />
+      <workItem from="1703943087683" duration="12721000" />
     </task>
+    <task id="LOCAL-00001" summary="Create Research page success">
+      <option name="closed" value="true" />
+      <created>1703936752310</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703936752310</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create Research page success" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Research page success" />
   </component>
 </project>

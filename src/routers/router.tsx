@@ -1,8 +1,8 @@
 import { Route, Routes} from "react-router";
 import { Navigation } from "../pages/navigate/Naviagation.page";
-import {HomePage} from "../pages/home/Home.page";
+import { HomePage } from "../pages/home/Home.page";
 import { ResearchPage } from "../pages/research/Research.page";
-
+import { LaboratoriesPage } from "../pages/laboratories/Laboratories.page";
 
 const Router = () => {
 
@@ -17,14 +17,14 @@ const Router = () => {
           {/*  <Route path={"detail"} element={<DetailResearch />} />*/}
           {/*  <Route path={"modResearch"} element={<ModResearch />} />*/}
           </ Route>
-          {/*<Route path={"laboratories/*"} element={<LaboratoriesPage />} >*/}
-        {/*    <Route path={"laboratory/*"} element={<Laboratory />} >*/}
-        {/*      <Route path={"member"} element={<Member />} />*/}
-        {/*      <Route path={"researchList"} element={<ResearchList />} />*/}
-        {/*      <Route path={"modResearch"} element={<ModResearch/>} />*/}
-        {/*      <Route path={"modMember"} element={<ModMember/>} />*/}
-        {/*    </Route>*/}
-        {/*  </Route>*/}
+          <Route path={"laboratories/*"} element={<LaboratoriesPage />} >
+            {/*<Route path={"laboratory/*"} element={<Laboratory />} >*/}
+            {/*  <Route path={"member"} element={<Member />} />*/}
+            {/*  <Route path={"researchList"} element={<ResearchList />} />*/}
+            {/*  <Route path={"modResearch"} element={<ModResearch/>} />*/}
+            {/*  <Route path={"modMember"} element={<ModMember/>} />*/}
+            {/*</Route>*/}
+          </Route>
         {/*  <Route path={"/profile/*"} element={<Profile />} >*/}
         {/*    <Route path={"detail"} element={<DetailProfile />} />*/}
         {/*    <Route path={"research"} element={<ProfileResearch />} />*/}

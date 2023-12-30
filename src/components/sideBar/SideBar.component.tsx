@@ -41,11 +41,11 @@ export const SideBar = styled(Component)<Props>(({ theme : {token}})=> {
     width: 240,
     display: 'flex',
     flexDirection: 'column',
-    position: 'fixed',
-    left: '80%',
-    border: '1px solid',
+    border: '1px solid transparent',
     backgroundColor: token.colorBgSecondary,
     borderRadius: 8,
+    height: 'fit-content',
+    marginRight: 100,
 
     '.__navigate-home': {
       backgroundColor: token.colorBgGreen,
@@ -74,7 +74,7 @@ export const SideBar = styled(Component)<Props>(({ theme : {token}})=> {
     '.__navigate-item': {
       padding: 20,
       transition: 'background-color .3s',
-      borderRadius: '8px 8px 0 0',
+      borderRadius: 8,
 
       '&:hover': {
         backgroundColor: 'white',
