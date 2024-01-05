@@ -3,6 +3,11 @@ import { Navigation } from "../pages/navigate/Naviagation.page";
 import { HomePage } from "../pages/home/Home.page";
 import { ResearchPage } from "../pages/research/Research.page";
 import { LaboratoriesPage } from "../pages/laboratories/Laboratories.page";
+import { LaboratoryPage } from "../pages/laboratories/Laboratory.page";
+import {MemberLaboratoryPartPage} from "../pages/laboratories/part/body/MemberLaboratory.part.page";
+import {ResearchListLaboratoryPartPage} from "../pages/laboratories/part/body/ResearchListLaboratory.part.page";
+import { ModResearchLaboratoryPartPage } from "../pages/laboratories/part/body/ModResearch.part.page";
+import { ModLaboratoryPartPage } from "../pages/laboratories/part/body/Mod.part.page";
 
 const Router = () => {
 
@@ -17,13 +22,14 @@ const Router = () => {
           {/*  <Route path={"detail"} element={<DetailResearch />} />*/}
           {/*  <Route path={"modResearch"} element={<ModResearch />} />*/}
           </ Route>
-          <Route path={"laboratories/*"} element={<LaboratoriesPage />} >
-            {/*<Route path={"laboratory/*"} element={<Laboratory />} >*/}
-            {/*  <Route path={"member"} element={<Member />} />*/}
-            {/*  <Route path={"researchList"} element={<ResearchList />} />*/}
-            {/*  <Route path={"modResearch"} element={<ModResearch/>} />*/}
-            {/*  <Route path={"modMember"} element={<ModMember/>} />*/}
-            {/*</Route>*/}
+          <Route path={"laboratories/*"}>
+            <Route index element={<LaboratoriesPage />} />
+            <Route path={":laboratory/*"} element={<LaboratoryPage />} >
+              <Route path={"member"} element={<MemberLaboratoryPartPage />} />
+              <Route index element={<ResearchListLaboratoryPartPage />} />
+              <Route path={"mod"} element={<ModLaboratoryPartPage/>} />
+              <Route path={"modMember"} element={<ModLaboratoryPartPage/>} />
+            </Route>
           </Route>
         {/*  <Route path={"/profile/*"} element={<Profile />} >*/}
         {/*    <Route path={"detail"} element={<DetailProfile />} />*/}

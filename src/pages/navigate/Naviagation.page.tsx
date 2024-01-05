@@ -51,7 +51,7 @@ export const Navigation =  styled(Component)<Props>(({ theme: { token } }: Props
     '&._navigation_wrap': {
       display: 'flex',
       flexDirection: 'row',
-      width: '100%'
+      width: '100%',
     },
 
     '&._desktop': {

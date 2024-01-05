@@ -87,7 +87,8 @@ export const DropdownNavigate_nonAnimation = styled(Component)<Props>(({ theme: 
       display: 'flex',
       height: '0',
       width: '100%',
-      position: "absolute",
+      top: 0,
+      position: "fixed",
       transition: 'display 0.5s ease-in-out',
       transitionDelay: '10s',
       '&._active' : {

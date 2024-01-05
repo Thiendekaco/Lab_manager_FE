@@ -42,6 +42,7 @@ export const fadeStart = keyframes({
 })
 
 
+
 export const fadeInRight = keyframes({
   '0%': {
     opacity: 1,
@@ -87,3 +88,5 @@ export const fadeRight = keyframes({
     transform: 'translate3d(0,0,0)',
   }
 })
+
+

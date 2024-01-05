@@ -12,7 +12,7 @@ import {ArrowLeft, ArrowRight} from "phosphor-react";
 import {HeadlineHome} from "./Headline.home.page";
 import {PostItemCard} from "../../components/postItem/PostItemCard.component";
 import {useNavigate} from "react-router";
-import {Introduction} from "../../components/pageIntroduction/Introduce.component";
+import {Introduction} from "../../components/page-introduction/Introduce.component";
 import {Empty} from "../../components/empty/Empty.component";
 import {PostItemVideo} from "../../components/postItem/PostItemVideo.component";
 
@@ -300,6 +300,8 @@ export const HomePage = styled(Component)<Props>(({ theme: { token },  }: Props)
       flexDirection: 'column',
       gap: token.paddingMD,
       width: '100vw',
+      marginBottom: 400,
+
       '._homepage_video-container':{
           width: '100%',
         '._homepage-video_mask': {

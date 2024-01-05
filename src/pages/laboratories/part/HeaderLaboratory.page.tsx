@@ -1,12 +1,10 @@
-import {LaboratoryType, Theme, ThemeProps} from "../../types";
-import React, {useCallback, useContext} from "react";
-import styled, {useTheme} from "styled-components";
+import {LaboratoryType, ThemeProps} from "../../../types";
+import React, {useContext} from "react";
+import styled from "styled-components";
 import CN from "classnames";
-import {Badge} from "../badge/Badge.component";
-import {useTranslation} from "../../hook";
-import {ScreenContext} from "../../context/Screen.context";
-import { GlobeHemisphereWest, Buildings, Users   } from 'phosphor-react'
-import {fadeInRight} from "../../styles/styles.animation";
+import {useTranslation} from "../../../hook";
+import {ScreenContext} from "../../../context/Screen.context";
+import { GlobeHemisphereWest, Buildings} from 'phosphor-react'
 import {useNavigate} from "react-router";
 
 
@@ -19,30 +17,21 @@ interface PropsPostInterface extends ThemeProps {
 function Component (props :PropsPostInterface) {
   const { t } = useTranslation();
   const { isWebUI } = useContext(ScreenContext)
-  const { content : { name, status, country, location, activity, image }, className } = props;
-  const { token } = useTheme() as Theme;
-  const navigate = useNavigate();
+  const { content : { name, country, location, activity, image }, className } = props;
 
-
-  const onCLickToLaboratory = useCallback(()=>{
-    navigate(`${name}`)
-  },[name, navigate])
 
   return(
     <div className={CN(className, {
       '_desktop' : isWebUI,
-      '_mobile' : !isWebUI,
-    }, 'post-item')} onClick={onCLickToLaboratory}>
-      <img src={image} alt={image} className={'__posts-item-logo'} />
+      '_mobile' : !isWebUI
+    }, 'post-item')}>
+      <img src={image} alt={image} className={'__posts-item-logo'}/>
 
       <div className={'__post-item-content'}>
         <div className={'__post-item-left'}>
           <div className={'__post-item-info'}>
             <div className={'__post-item-name-lab'}>
               {name}
-            </div>
-            <div className={'_post-item-badge'}>
-              <Badge content={status} background={"#4274b7"} />
             </div>
           </div>
           <div className={'__post-item-place'}>
@@ -67,11 +56,11 @@ function Component (props :PropsPostInterface) {
 }
 
 
-export const PostLaboratory_nonAnimation = styled(Component)<PropsPostInterface>(({theme : {token}} : PropsPostInterface) => {
+export const HeaderLaboratory_nonAnimation = styled(Component)<PropsPostInterface>(({theme : {token}} : PropsPostInterface) => {
 
   return({
     '&.post-item' : {
-      borderTop: `1px solid ${token.colorBgSecondary}`,
+      borderTop: `2px solid ${token.colorBgSecondary}`,
       display: 'flex',
       padding: 20,
       gap: token.marginXS,
@@ -79,12 +68,12 @@ export const PostLaboratory_nonAnimation = styled(Component)<PropsPostInterface>
       cursor: "pointer",
       height: 180,
       width: '100%',
+      marginTop: 200,
       '.__post-item-content': {
         display: "flex",
         flexDirection: 'row',
         flex: '1 1 80%',
         gap: token.paddingMD,
-        justifyContent: "space-between",
       },
 
     },
@@ -100,8 +89,8 @@ export const PostLaboratory_nonAnimation = styled(Component)<PropsPostInterface>
 
     '.__posts-item-logo, .__post-item-activity': {
       borderRadius : 10,
-      width: 64,
-      height: 64,
+      width: 96,
+      height: 96,
       border: '1px solid transparent'
     },
 
@@ -136,7 +125,7 @@ export const PostLaboratory_nonAnimation = styled(Component)<PropsPostInterface>
   })
 })
 
-export const PostLaboratory = styled(PostLaboratory_nonAnimation)`
+export const HeaderLaboratory = styled(HeaderLaboratory_nonAnimation)`
   &:hover ._button-icon {
 
   },

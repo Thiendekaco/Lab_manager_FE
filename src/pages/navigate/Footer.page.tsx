@@ -59,7 +59,6 @@ export const FooterPage = styled(Component)<Props>(({theme: {token}})=>{
     width: '100%',
     height: 690,
     backgroundImage: 'url("https://www.shibaura-it.ac.jp/assets/img/common/_foo_bg_pc.webp")',
-    marginTop: 400,
 
     '._footer-wrap': {
       height: '100%',

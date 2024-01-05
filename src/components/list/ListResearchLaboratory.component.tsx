@@ -1,12 +1,12 @@
-import {LaboratoryType, ThemeProps} from "../../types";
+import { ResearchType, ThemeProps} from "../../types";
 import styled from "styled-components";
 import CN from "classnames";
 import React from "react";
 
 
 interface Props extends ThemeProps {
-  renderItem : (content : LaboratoryType)=> React.ReactNode;
-  list : LaboratoryType[];
+  renderItem : (content : ResearchType)=> React.ReactNode;
+  list : ResearchType[];
 };
 
 
@@ -25,9 +25,6 @@ function Component ({className, renderItem, list} : Props){
           list.map((item, index)=> <div key={index}>{renderItem(item)}</div>)
         }
       </div>
-      <div className={'__list-laboratory-footer'}>
-
-      </div>
     </div>
   )
 
@@ -35,23 +32,17 @@ function Component ({className, renderItem, list} : Props){
 
 
 
-export const LaboratoryList = styled(Component)<Props>(({theme: {token}}) => {
+export const ResearchLaboratoryList = styled(Component)<Props>(({theme: {token}}) => {
 
   return({
     width: '100%',
     height: '100%',
-    maxHeight: 1000,
-    overflow: "auto",
-    scrollbarWidth: 'none',
-
-    '&::-webkit-scrollbar' :{
-      display: 'none'
-    },
+    minHeight: 3000,
 
     '.__list-laboratory-body': {
-      display:'flex',
+      display: 'flex',
       flexDirection: 'column',
-      gap: token.margin
+      gap: token.paddingLG
     }
 
   })

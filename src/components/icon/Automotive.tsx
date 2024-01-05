@@ -40,6 +40,13 @@ const AutomotiveIcon = styled(Component)<Props>(({theme: {token}}) => {
       width: 30,
       margin: 'auto',
       height: 30,
+
+      cursor: 'pointer',
+      transition: 'transform .3s ease-in-out',
+
+      '&:hover':{
+        transform: 'scale(1.3)'
+      }
     },
 
     '._icon-label':{

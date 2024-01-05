@@ -166,11 +166,11 @@ export const ResearchPage = styled(Component)<Props>(({theme : {token}})=>{
 
   return ({
     paddingLeft: token.paddingXS,
-
+    marginBottom: 400,
     '._research-wrap': {
       display: 'flex',
       flexWrap: 'wrap',
-      marginTop: token.marginXS,
+      marginTop: 200,
       justifyContent: 'space-between'
     },
 

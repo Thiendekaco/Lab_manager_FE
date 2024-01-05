@@ -1,13 +1,13 @@
 import {ThemeProps} from "../../types";
 import styled from "styled-components";
 import CN from "classnames";
-import {useContext} from "react";
+import React, {useContext} from "react";
 import {ScreenContext} from "../../context/Screen.context";
 import {useTranslation} from "../../hook";
 
 
 interface Props extends ThemeProps {
-  content : string,
+  content : string | React.ReactNode,
   background ?: string
 }
 
@@ -20,7 +20,7 @@ function Component ({className, content} : Props) {
   return (
     <div className={CN(className, '_badge-wrap')}>
       <div className={'_badge-content'}>
-        {t(content)}
+        {typeof  content === 'string' ? t(content) :  content}
       </div>
     </div>
   )

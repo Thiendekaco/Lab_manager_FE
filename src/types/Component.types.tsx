@@ -1,4 +1,5 @@
 import React from "react";
+import {RoleEnum} from "../constants/Role.constant";
 
 export type ContentType = {
   image ?: string,
@@ -32,4 +33,12 @@ export type LaboratoryType = {
   location ?: string,
   country ?: string,
   activity ?: ActivityInterface[]
+}
+
+
+export type MemberType = {
+  name : string,
+  image ?: string,
+  role : RoleEnum,
+  follow : MemberType[]
 }

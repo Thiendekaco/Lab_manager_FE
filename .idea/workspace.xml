@@ -5,16 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6679f9e8-d042-49ed-90bf-22c1cafb362e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/banner/BannerHeader.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/list/ListLaboratory.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratory.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/laboratories/Laboratories.page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/button/ButtonAccept.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/button/ButtonShape.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header-post/HeaderPost.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/list/ListMember.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/list/ListResearchLaboratory.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/postItem/PostCardLaboratory.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratoryMini.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/postItem/PostItemMember.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/postItem/PostModMember.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/reaction/ModAction.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/reaction/Reaction.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/Role.constant.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/laboratories/Laboratory.page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/laboratories/part/HeaderLaboratory.page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/laboratories/part/Navigation.part.page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/laboratories/part/body/MemberLaboratory.part.page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/laboratories/part/body/Mod.part.page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/laboratories/part/body/ModResearch.part.page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/laboratories/part/body/ResearchListLaboratory.part.page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/laboratories/part/sideBar/SideBarRight.part.page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/laboratories/part/sideBar/SiderBarLeft.part.page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sideBar/SideBar.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/SideBar.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/url.constant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Url.constant.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/badge/Badge.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/badge/Badge.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dropdown/DrodownNavigate.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/DrodownNavigate.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icon/Automotive.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icon/Automotive.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icon/Health.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icon/Health.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icon/Medical.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icon/Medical.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/list/ListLaboratory.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list/ListLaboratory.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pageIntroduction/Introduce.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/page-introduction/Introduce.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratory.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratory.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemResearch.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemResearch.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/Home.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/laboratories/Laboratories.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/laboratories/Laboratories.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/navigate/Footer.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigate/Footer.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/navigate/Header.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigate/Header.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/navigate/Naviagation.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigate/Naviagation.page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/research/Research.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/research/Research.page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routers/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/router.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.animation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.animation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/Component.types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Component.types.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +94,9 @@
       <recent name="C:\Users\Admin\Documents\temp\Reactjs-project2\lab_manager_fe\src\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Documents\temp\Reactjs-project2\lab_manager_fe\src\pages\laboratories\part\body" />
+      <recent name="C:\Users\Admin\Documents\temp\Reactjs-project2\lab_manager_fe\src\pages\laboratories" />
+      <recent name="C:\Users\Admin\Documents\temp\Reactjs-project2\lab_manager_fe\src\pages\laboratories\part" />
       <recent name="C:\Users\Admin\Documents\temp\Reactjs-project2\lab_manager_fe\src\components" />
       <recent name="C:\Users\Admin\Documents\temp\Reactjs-project2\lab_manager_fe\src\routers" />
     </key>
@@ -146,7 +178,25 @@
       <workItem from="1703906175122" duration="1722000" />
       <workItem from="1703920095680" duration="14376000" />
       <workItem from="1703936698371" duration="91000" />
-      <workItem from="1703943087683" duration="12721000" />
+      <workItem from="1703943087683" duration="12850000" />
+      <workItem from="1704029249181" duration="2732000" />
+      <workItem from="1704032720026" duration="79000" />
+      <workItem from="1704110568454" duration="12270000" />
+      <workItem from="1704178077702" duration="5000" />
+      <workItem from="1704181399653" duration="492000" />
+      <workItem from="1704181914954" duration="5000" />
+      <workItem from="1704183030465" duration="237000" />
+      <workItem from="1704183613100" duration="497000" />
+      <workItem from="1704184329594" duration="60000" />
+      <workItem from="1704184400441" duration="55000" />
+      <workItem from="1704195486334" duration="148000" />
+      <workItem from="1704266986680" duration="366000" />
+      <workItem from="1704289491715" duration="11492000" />
+      <workItem from="1704351763766" duration="9000" />
+      <workItem from="1704378221230" duration="9083000" />
+      <workItem from="1704424547009" duration="4126000" />
+      <workItem from="1704437541644" duration="322000" />
+      <workItem from="1704465020532" duration="9550000" />
     </task>
     <task id="LOCAL-00001" summary="Create Research page success">
       <option name="closed" value="true" />
@@ -156,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703936752310</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create list lab page success">
+      <option name="closed" value="true" />
+      <created>1703956368023</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703956368023</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +222,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create Research page success" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Research page success" />
+    <MESSAGE value="Create list lab page success" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create list lab page success" />
   </component>
 </project>

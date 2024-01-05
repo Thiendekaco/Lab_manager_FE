@@ -167,11 +167,16 @@ export const HeaderPage =  styled(Component)<Props>(({ theme: { token } }: Props
     '&._navigation_wrap': {
       display: 'flex',
       flexDirection: 'row',
-      width: '100%'
+      width: '100%',
+      height: 200,
+      position: 'fixed',
+      top: 0,
+      zIndex: 10000,
+      backgroundColor: 'white'
     },
 
     '&._desktop': {
-      height: '130px',
+      height: '200px',
       padding:  token.paddingMD,
       paddingBottom: 0,
       marginBottom: token.marginLG,
@@ -185,7 +190,7 @@ export const HeaderPage =  styled(Component)<Props>(({ theme: { token } }: Props
 
       '._navigation_box': {
         display: 'flex',
-        alignItems: 'flex-end',
+        alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'space-around' ,
         marginLeft: token.marginXS,
