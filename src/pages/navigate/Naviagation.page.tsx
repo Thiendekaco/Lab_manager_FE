@@ -1,30 +1,10 @@
 import styled, {StyledObject, useTheme} from "styled-components";
 import { useTranslation } from  '../../hook';
 import { ThemeProps } from "../../types";
-import React, {
-  AnchorHTMLAttributes,
-  MouseEventHandler,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState
-} from "react";
-import { ScreenContext } from "../../context/Screen.context";
-import {Link} from "react-router-dom";
-import CN from 'classnames';
+import React, {} from "react";
 import { Outlet } from "react-router-dom";
-import { Substitute } from "styled-components/dist/types";
-import { Globe, MagnifyingGlass   } from "phosphor-react";
-import { Theme } from "../../types";
-import {
-  ContentOptionType,
-  DropdownNavigate,
-  GroupOptionType
-} from "../../components/dropdown/DrodownNavigate.component";
 import {HeaderPage} from "./Header.page";
 import {FooterPage} from "./Footer.page";
-const Logo = require('../../assets/images/HustLogo.ico');
 
 
 type Props = ThemeProps ;

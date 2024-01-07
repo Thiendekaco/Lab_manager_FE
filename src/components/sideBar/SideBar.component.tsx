@@ -48,7 +48,7 @@ export const SideBar = styled(Component)<Props>(({ theme : {token}})=> {
     marginRight: 100,
 
     '.__navigate-home': {
-      backgroundColor: token.colorBgGreen,
+      backgroundColor: token.colorBgGreen1,
       padding: '40px 20px',
       width: '100%',
       borderRadius: '8px 8px 0 0'

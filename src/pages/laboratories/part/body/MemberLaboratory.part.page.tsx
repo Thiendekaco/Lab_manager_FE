@@ -119,29 +119,29 @@ function Component ( { className } : Props ) {
 
 
   return (
-    <div className={CN(className, '-mod-page')}>
-      <h2 className={'__mod-page-label'}>
+    <div className={CN(className, '-member-page')}>
+      <h2 className={'__member-page-label'}>
         {t('Members')} 59
       </h2>
-      <div className={'__mod-wrap'}>
-        <h4 className={'__mod-admin-label'}>
+      <div className={'__member-wrap'}>
+        <h4 className={'__member-admin-label'}>
           {t('Admin')} 3
         </h4>
-        <input type={'text'} className={'__mod-filter'} placeholder={`${t('Find a -mod')}`}/>
+        <input type={'text'} className={'__member-filter'} placeholder={`${t('Find a member')}`}/>
         <MemberList list={admin} renderItem={renderItem} />
       </div>
-      <div className={'__mod-wrap'}>
-        <h4 className={'__mod-moder-label'}>
+      <div className={'__member-wrap'}>
+        <h4 className={'__member-moder-label'}>
           {t('Moder')} 23
         </h4>
-        <input type={'text'} className={'__mod-filter'} placeholder={`${t('Find a -mod')}`}/>
+        <input type={'text'} className={'__member-filter'} placeholder={`${t('Find a member')}`}/>
         <MemberList list={modder} renderItem={renderItem} />
       </div>
-      <div className={'__mod-wrap'}>
-        <h4 className={'__mod-moder-label'}>
-          {t('-mod')} 123
+      <div className={'__member-wrap'}>
+        <h4 className={'__member-moder-label'}>
+          {t('Members')} 123
         </h4>
-        <input type={'text'} className={'__mod-filter'} placeholder={`${t('Find a -mod')}`}/>
+        <input type={'text'} className={'__member-filter'} placeholder={`${t('Find a member')}`}/>
         <MemberList list={member} renderItem={renderItem} />
       </div>
     </div>
@@ -158,7 +158,7 @@ export const MemberLaboratoryPartPage_nonAnimation = styled(Component)<Props>(({
     padding: token.paddingMD,
     borderRadius: '10px 10px 0 0',
 
-    '.__mod-filter': {
+    '.__member-filter': {
       width: '100%',
       height: 36,
       border: '3px solid',
@@ -178,9 +178,15 @@ export const MemberLaboratoryPartPage_nonAnimation = styled(Component)<Props>(({
       },
     },
 
-    '.__mod-wrap': {
-      width: '90%',
-      margin: 'auto'
+    '.__member-wrap': {
+      width: '100%',
+      margin: 'auto',
+      padding: `0px ${token.paddingMD}px`,
+      boxShadow: '10px 8px 24px -8px rgba(0,0,0,.04), 1px 1px 1px rgba(0,0,0,0.04)',
+      borderRadius: 10,
+      border: '1px solid',
+      marginBottom: token.marginMD,
+      borderColor: token.colorBgSecondary
     }
   })
 

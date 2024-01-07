@@ -101,7 +101,7 @@ function Component({theme, className} : Props) {
             <div className={'_group-button'} style={{display: 'flex', gap: token.paddingMD}}>
               <Button size={"lg"} onClick={onClickToTurnRightImg} isRadius={true}
                       backgroundColor={"transparent"}
-                      borderColor={token.colorBgGreen}
+                      borderColor={token.colorBgGreen1}
                       isBorder={true}
                       icon={
                         <div className={'_button-icon'} >
@@ -109,13 +109,13 @@ function Component({theme, className} : Props) {
                             size={27}
                             className={'_option-icon'}
                             weight={"bold"}
-                            color={token.colorBgGreen}
+                            color={token.colorBgGreen1}
                           />
                         </div>}
               />
               <Button size={'lg'} onClick={onClickToTurnLeftImg} isRadius={true}
                       backgroundColor={"transparent"}
-                      borderColor={token.colorBgGreen}
+                      borderColor={token.colorBgGreen1}
                       isBorder={true}
                       icon={
                         <div className={'_button-icon'} >
@@ -123,7 +123,7 @@ function Component({theme, className} : Props) {
                             size={27}
                             className={'_option-icon'}
                             weight={"bold"}
-                            color={token.colorBgGreen}
+                            color={token.colorBgGreen1}
                           />
                         </div>}
               />
@@ -200,7 +200,7 @@ function Component({theme, className} : Props) {
           <div className={CN('_group', '-left')}>
             <Button size={"lg"} onClick={onClickToTurnRightPostCard} isRadius={true}
                     backgroundColor={"transparent"}
-                    borderColor={token.colorBgGreen}
+                    borderColor={token.colorBgGreen1}
                     isBorder={true}
                     icon={
                       <div className={'_button-icon'} >
@@ -208,13 +208,13 @@ function Component({theme, className} : Props) {
                           size={27}
                           className={'_option-icon'}
                           weight={"bold"}
-                          color={token.colorBgGreen}
+                          color={token.colorBgGreen1}
                         />
                       </div>}
             />
             <Button size={'lg'} onClick={onClickToTurnLeftPostCard} isRadius={true}
                     backgroundColor={"transparent"}
-                    borderColor={token.colorBgGreen}
+                    borderColor={token.colorBgGreen1}
                     isBorder={true}
                     icon={
                       <div className={'_button-icon'} >
@@ -222,7 +222,7 @@ function Component({theme, className} : Props) {
                           size={27}
                           className={'_option-icon'}
                           weight={"bold"}
-                          color={token.colorBgGreen}
+                          color={token.colorBgGreen1}
                         />
                       </div>}
                     />
@@ -347,7 +347,7 @@ export const HomePage = styled(Component)<Props>(({ theme: { token },  }: Props)
 
           '._homepage_carousel-title': {
             fontSize: token.fontSize + 10,
-            color: token.colorBgGreen,
+            color: token.colorBgGreen1,
           },
           '._homepage_carousel-content': {
             fontSize: token.fontSizeSM + 5,
@@ -447,7 +447,7 @@ export const HomePage = styled(Component)<Props>(({ theme: { token },  }: Props)
       width: 'fit-content',
       fontSize: 54,
       fontWeight: 600,
-      color: token.colorBgGreen
+      color: token.colorBgGreen1
     },
 
     '.-center': {

@@ -22,6 +22,7 @@ import {
   DropdownNavigate,
   GroupOptionType
 } from "../../components/dropdown/DrodownNavigate.component";
+import {useNavigate} from "react-router";
 const Logo = require('../../assets/images/HustLogo.ico');
 
 
@@ -59,9 +60,18 @@ export function Component ( { className} : Props) {
   const { t } = useTranslation();
   const { isWebUI } = useContext(ScreenContext)
   const { token } = useTheme() as Theme;
+  const navigate = useNavigate();
   const [ contentOption, setContentOption ] = useState<GroupOptionType[]>([])
   const [isHover, setIsHover ] = useState<boolean>(false);
 
+
+  const onNavigateToSignIn =  useCallback(()=>{
+    navigate('/signIn')
+  },[navigate])
+
+  const onNavigateToSignUp =  useCallback(()=>{
+    navigate('/signUp')
+  },[navigate])
 
   const onMouseEnter = useCallback(( e : React.MouseEvent<HTMLAnchorElement>)=>{
     const value = e.currentTarget.id;
@@ -150,10 +160,10 @@ export function Component ( { className} : Props) {
           {t('Search')}
         </div>
 
-        <div className={'_navigation_item -login'}>
+        <div className={'_navigation_item -login'} onClick={onNavigateToSignIn}>
           {t('Login')}
         </div>
-        <div className={'_navigation_item -signUp'}>
+        <div className={'_navigation_item -signUp'} onClick={onNavigateToSignUp}>
           {t('SignUp')}
         </div>
       </div>
@@ -234,6 +244,15 @@ export const HeaderPage =  styled(Component)<Props>(({ theme: { token } }: Props
     '&._mobile': {
 
     },
+
+    '.-signUp, .-login': {
+      cursor: 'pointer',
+      transform: 'color .3s ease-in-out',
+
+      '&:hover': {
+        opacity: .7
+      }
+    }
 
 
   }

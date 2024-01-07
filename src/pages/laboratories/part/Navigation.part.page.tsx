@@ -33,10 +33,10 @@ function Component ( {className} : ThemeProps){
       })}>
         {t('Mod')}
       </Link>
-      <Link to={'mod'} className={CN('__navigate-link', {
-        '-active' : param['*'] === 'modMember'
+      <Link to={'about'} className={CN('__navigate-link', {
+        '-active' : param['*'] === 'about'
       })}>
-        {t('Mod Research')}
+        {t('About')}
       </Link>
     </div>
   )

@@ -14,17 +14,19 @@ interface Props extends ThemeProps {
   colorTextChange ?: string,
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   color ?: string
+  type ?:  "button" | "submit" | "reset"
 }
 
 
 function Component (props: Props){
-  const { className, label } = props
+  const { className, label, type } = props
 
 
 
 
   return(
     <button
+      type={type}
       className={CN(className)}
       onClick={props.onClick}
     >

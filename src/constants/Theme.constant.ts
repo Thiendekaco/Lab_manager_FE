@@ -9,7 +9,7 @@ export  const THEME_TOKEN_DEFAULT: GlobalToken = {
   lineType: 10,
 
   colorTextSecondary: '#646464',
-  colorTextLight: '#ebfaf3',
+  colorTextLight: '#ffffff',
   colorTextDark: '#160002',
   colorTextError: '#d5413b',
   colorTextRed: '#bf1616',
@@ -17,11 +17,17 @@ export  const THEME_TOKEN_DEFAULT: GlobalToken = {
 
 
   colorBgSecondary: '#f5f5f5',
-  colorBgLight: '#0078d9',
+  colorBgYellow: '#D3D548',
+  colorBgLight: '#ffffff',
+  colorBgBlue: '#62a3ea' ,
+  colorBgBlue2: '#22b6c7',
+  colorBgBlue3: '#3c6ed1',
+  colorBgPink: '#f36fed',
   colorBgDark: '#0d1117',
-  colorBgRed: '#d5413b',
-  colorBgError: '#921111',
-  colorBgGreen: '#134e3b',
+  colorBgRed: '#f65353',
+  colorBgError: '#ef3a3a',
+  colorBgGreen: '#7aed52',
+  colorBgGreen1: '#134e3b',
   colorBgMix: 'linear-gradient(270deg, #4aaed3 0%, #4aaed3 6.4102564103%, #4ac4d3 23.8461538462%, #89f2b8 76.1538461538%, #bef2dc 87.1794871795%, #bef2dc 100%), url("https://www.shibaura-it.ac.jp/assets/img/common/_noise.svg")',
   colorTransparent: 'rgba(0, 0, 0, 0.1)',
   lineWidth: 10,
@@ -79,7 +85,7 @@ export const THEME_CONFIGS: Record<ThemeNames, Theme> = {
       ...THEME_TOKEN_DEFAULT,
       backgroundColor : '#0d1117',
       color: '#ffffff',
-      colorBgInput: '#ffffff',
+      colorBgInput: '#252525',
     }
   },
   [ThemeNames.LIGHT]: {

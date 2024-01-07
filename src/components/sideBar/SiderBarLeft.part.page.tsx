@@ -1,13 +1,13 @@
-import {LaboratoryType, Theme, ThemeProps} from "../../../../types";
+import {LaboratoryType, Theme, ThemeProps} from "../../types";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
 import {Eye, EyeSlash, Buildings, Users} from "phosphor-react";
-import {Button} from "../../../../components/button/Button.component";
-import {useTranslation} from "../../../../hook";
-import {ButtonShape} from "../../../../components/button/ButtonShape.component";
+import {Button} from "../button/Button.component";
+import {useTranslation} from "../../hook";
+import {ButtonShape} from "../button/ButtonShape.component";
 import {useCallback} from "react";
-import {PostLaboratory} from "../../../../components/postItem/PostItemLaboratory.component";
-import {fadeRight, fadeStart, scaleButton} from "../../../../styles/styles.animation";
+import {PostLaboratory} from "../postItem/PostItemLaboratory.component";
+import {fadeRight, fadeStart, scaleButton} from "../../styles/styles.animation";
 
 
 interface Props extends ThemeProps {
@@ -44,8 +44,8 @@ function Component  ({ className, content } : Props) {
         <div className={'__side-bar-right-group-button'}>
           <div className={'__side-bar-right-join'}>
             <ButtonShape label={t('Join')}
-                         backgroundColor={token.colorBgGreen}
-                         backgroundColorHover={token.colorBgGreen}
+                         backgroundColor={token.colorBgGreen1}
+                         backgroundColorHover={token.colorBgGreen1}
                          colorTextChange={'white'}
                          color={'white'}
             />
@@ -77,11 +77,13 @@ export const SideBarRightPart_nonAnimation = styled(Component)<Props> (({theme: 
     flexDirection: 'column',
     gap: token.paddingMD,
 
+
     '.__side-bar-right-about-box, .__side-bar-right-group-button': {
       borderRadius: 10,
       width: '100%',
       backgroundColor: 'white',
       padding: 30,
+      boxShadow: '10px 20px 20px 10px rgba(0, 0, 0, 0.2)',
       display: 'flex',
       flexDirection: 'column',
       gap: token.paddingMD,

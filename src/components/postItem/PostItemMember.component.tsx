@@ -84,6 +84,9 @@ export const PostMember_nonAnimation = styled(Component)<PropsPostMemberInterfac
       height: 90,
       margin: 'auto',
       width: '100%',
+
+
+
       '.__post-member-content': {
         display: "flex",
         flexDirection: 'row',

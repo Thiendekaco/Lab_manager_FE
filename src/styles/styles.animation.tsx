@@ -90,3 +90,17 @@ export const fadeRight = keyframes({
 })
 
 
+export const transaletFrom = keyframes({
+      'from': { left: '100%' },
+
+      'to' : { left: 0 }
+})
+
+export const shake = keyframes({
+  'from': {left: -2},
+    'to': {left: 2}
+})
+
+
+
+

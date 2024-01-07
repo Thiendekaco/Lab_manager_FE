@@ -6,8 +6,8 @@ import {useParams} from "react-router";
 import {PostLaboratory} from "../../components/postItem/PostItemLaboratory.component";
 import {useContext, useEffect, useState} from "react";
 import {HeaderLaboratory} from "./part/HeaderLaboratory.page";
-import {SideBarLeftPart} from "./part/sideBar/SideBarRight.part.page";
-import {SideBarRightPart} from "./part/sideBar/SiderBarLeft.part.page";
+import {SideBarLeftPart} from "../../components/sideBar/SideBarRight.part.page";
+import {SideBarRightPart} from "../../components/sideBar/SiderBarLeft.part.page";
 import {NavigationLaboratoryPart} from "./part/Navigation.part.page";
 import {Outlet} from "react-router-dom";
 import {ScreenContext} from "../../context/Screen.context";
@@ -172,10 +172,9 @@ function Component ( { className } : Props){
   const { laboratory } = useParams<LaboratoryTypeParam>();
   const [ laboratory_, setLaboratory ] = useState<LaboratoryType>()
   const { isWebUI } = useContext(ScreenContext);
-
+  const param = useParams();
 
   useEffect(() => {
-    console.log(laboratory);
     setLaboratory(doc.find((d)=> d.name === laboratory))
   }, [laboratory]);
 
@@ -193,8 +192,8 @@ function Component ( { className } : Props){
          <div className={'__laboratory-body-content-center'}>
           <Outlet />
          </div>
-         { isWebUI && <div className={'__laboratory-body-side-bar-right'}>
-           { laboratory_ && <SideBarRightPart content={laboratory_}/> }
+         { isWebUI && param['*'] !== 'about' && <div className={'__laboratory-body-side-bar-right'}>
+           { laboratory_  && <SideBarRightPart content={laboratory_}/> }
          </div> }
        </div>
      </div>
@@ -246,7 +245,7 @@ export const LaboratoryPage = styled(Component)<Props>(({theme: {token}})=>{
     '.__laboratory-body-content': {
       display: 'flex',
       flexWrap: 'nowrap',
-      backgroundColor: token.colorBgSecondary
+      backgroundColor: 'white'
     },
 
     '.__laboratory-body-side-bar-right': {

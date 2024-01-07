@@ -29,7 +29,7 @@ function Component ({className, content} : Props) {
 
 export const Badge = styled(Component)<Props>(({theme: {token}, background} : Props) => {
   return ({
-    backgroundColor : background || token.colorBgGreen,
+    backgroundColor : background || token.colorBgGreen1,
     border: '1px solid transparent',
     borderRadius: 10,
     padding: '5px 10px',

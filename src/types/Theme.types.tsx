@@ -34,6 +34,12 @@ export interface GlobalToken {
   colorTransparent: string,
   colorBgMix: string,
   colorBgGreen: string,
+  colorBgGreen1: string,
+  colorBgBlue: string,
+  colorBgPink: string,
+  colorBgYellow: string,
+  colorBgBlue2: string,
+  colorBgBlue3: string,
 
   lineWidth: number,
   lineWidthMD: number,

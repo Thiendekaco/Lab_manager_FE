@@ -124,21 +124,21 @@ function Component ( { className } : Props ) {
 
   const renderItemMember =  useCallback((content : MemberType)=>{
     return <PostModMember content={content}
-                          footer={<ModAction
-                              nameFilter={content.name}
-                             onNext={handleListModMember}
-                             onDeny={handleListModMember}
-                             onAccept={handleListModMember} /> }
+                  footer={<ModAction
+                      nameFilter={content.name}
+                     onNext={handleListModMember}
+                     onDeny={handleListModMember}
+                     onAccept={handleListModMember} /> }
     />
   }, [handleListModMember])
 
   const renderItemResearch = useCallback((content : ResearchType)=>{
     return <PostCardLaboratory content={content}
-                          footer={<ModAction
-                            nameFilter={content.title || ''}
-                            onNext={handleListModResearch}
-                            onDeny={handleListModResearch}
-                            onAccept={handleListModResearch} /> }
+                  footer={<ModAction
+                    nameFilter={content.title || ''}
+                    onNext={handleListModResearch}
+                    onDeny={handleListModResearch}
+                    onAccept={handleListModResearch} /> }
     />
   }, [handleListModMember])
 

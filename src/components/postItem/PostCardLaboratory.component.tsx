@@ -73,6 +73,9 @@ export const PostCardLaboratory_nonAnimation = styled(Component)<PropsPostInterf
       borderColor: token.colorBgSecondary,
       boxSizing: 'border-box',
       backgroundColor: 'white',
+      boxShadow: '10px 8px 24px -8px rgba(0,0,0,.04), 1px 1px 1px rgba(0,0,0,0.04)',
+
+
       '._post-item-content': {
         display: "flex",
         flexDirection: 'column',

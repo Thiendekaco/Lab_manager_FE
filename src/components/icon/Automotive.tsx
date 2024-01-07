@@ -4,7 +4,9 @@ import CN from "classnames";
 import React from "react";
 
 
-interface Props extends ThemeProps {}
+interface Props extends ThemeProps {
+
+}
 
 
 const image = 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_dept_8_w.svg'

@@ -45,6 +45,7 @@ export const MemberList = styled(Component)<Props>(({theme: {token}}) => {
     scrollbarWidth: 'none',
     minHeight: 300,
 
+
     '&::-webkit-scrollbar' :{
       display: 'none'
     },

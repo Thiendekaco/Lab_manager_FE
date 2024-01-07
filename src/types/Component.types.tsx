@@ -31,6 +31,8 @@ export type LaboratoryType = {
   status : 'public' | 'private',
   name: string,
   location ?: string,
+  createAt ?: string,
+  top ?: number,
   country ?: string,
   activity ?: ActivityInterface[]
 }

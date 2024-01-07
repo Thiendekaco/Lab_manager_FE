@@ -1325,6 +1325,11 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.55.0.tgz"
   integrity sha512-qQfo2mxH5yVom1kacMtZZJFVdW+E70mqHMJvVg6WTLo+VBuQJ4TojZlfWBjK0ve5BdEeNAVxOsl/nvNMpJOaJA==
 
+"@garvae/react-pie-donut-chart@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@garvae/react-pie-donut-chart/-/react-pie-donut-chart-1.0.3.tgz#be32a29c4e5740230908d210327d55a765df9957"
+  integrity sha512-0OI4HjAmeSGFE2DcvSVAFBJgE2QzDKe5YXYmIIjKjhpZcAzqRPHsP3sonAZ7mUYe3xkgtm0MK7MURkXRwttABA==
+
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.13"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.13.tgz"

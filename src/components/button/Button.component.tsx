@@ -42,7 +42,7 @@ function Component (props: Props){
 
 export const Button_nonAnimation = styled(Component)<Props>(({theme: {token}, backgroundColor, borderColor} :Props) => {
   return({
-    backgroundColor : backgroundColor || token.colorBgGreen,
+    backgroundColor : backgroundColor || token.colorBgGreen1,
     border : '1px solid',
     borderColor: borderColor || "transparent",
     display: 'block',

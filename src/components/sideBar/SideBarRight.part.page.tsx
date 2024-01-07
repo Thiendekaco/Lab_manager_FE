@@ -1,13 +1,13 @@
-import {LaboratoryType, Theme, ThemeProps} from "../../../../types";
+import {LaboratoryType, Theme, ThemeProps} from "../../types";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
-import {ButtonShape} from "../../../../components/button/ButtonShape.component";
+import {ButtonShape} from "../button/ButtonShape.component";
 import {useTranslation} from "react-i18next";
-import {LaboratoryList} from "../../../../components/list/ListLaboratory.component";
+import {LaboratoryList} from "../list/ListLaboratory.component";
 import {useCallback} from "react";
-import {PostLaboratoryMini} from "../../../../components/postItem/PostItemLaboratoryMini.component";
+import {PostLaboratoryMini} from "../postItem/PostItemLaboratoryMini.component";
 import { User } from "phosphor-react";
-import {RoleEnum, RoleIcon} from "../../../../constants/Role.constant";
+import {RoleEnum, RoleIcon} from "../../constants/Role.constant";
 
 
 interface Props extends ThemeProps {
@@ -102,6 +102,7 @@ export const SideBarLeftPart = styled(Component)<Props> (({theme: {token}})=>{
     gap: token.paddingMD,
     borderTop: '2px solid #f5f5f5',
     paddingTop: 10,
+
 
     '.__side-bar-left-your-lab': {
       display: 'flex',

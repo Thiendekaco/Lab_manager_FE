@@ -67,8 +67,13 @@ export const PostModMember_nonAnimation = styled(Component)<PropsPostModMemberIn
       padding: token.paddingMD,
       margin: 'auto',
       width: '100%',
-      backgroundColor: token.colorBgSecondary,
+      backgroundColor: 'white',
       borderRadius: 20,
+      border: '1px solid',
+      borderColor: token.colorBgSecondary,
+      boxShadow: '1px 1px 3px rgba(0,0,0,0.1)',
+
+
       '.__post-member-content': {
         display: "flex",
         flexDirection: 'row',

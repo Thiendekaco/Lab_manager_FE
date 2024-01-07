@@ -35,8 +35,6 @@ export const ModAction = styled(Component)<Props>(({theme: {token}})=>{
     display: 'flex',
     gap: token.paddingMD,
     justifyContent: 'center',
-    borderTop: '1px solid',
-    borderColor: token.colorBgSecondary,
     padding: '1vw',
 
     '.__reaction-icon': {

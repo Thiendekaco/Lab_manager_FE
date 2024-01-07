@@ -69,6 +69,7 @@ export const HeaderLaboratory_nonAnimation = styled(Component)<PropsPostInterfac
       height: 180,
       width: '100%',
       marginTop: 200,
+
       '.__post-item-content': {
         display: "flex",
         flexDirection: 'row',
