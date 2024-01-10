@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6679f9e8-d042-49ed-90bf-22c1cafb362e" name="Changes" comment="add profile page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratory.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratory.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/authentication/part/Confirm.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authentication/part/Confirm.part.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/authentication/part/Reform.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authentication/part/Reform.part.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/authentication/part/Registration.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authentication/part/Registration.part.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routers/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/router.tsx" afterDir="false" />
+    <list default="true" id="6679f9e8-d042-49ed-90bf-22c1cafb362e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostModMember.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostModMember.component.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704904984650</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="change url navigate domain">
+      <option name="closed" value="true" />
+      <created>1704905633574</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1704905633574</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,6 +341,7 @@
     <MESSAGE value="add profile page xxfxgfcg" />
     <MESSAGE value="change package.json" />
     <MESSAGE value="add profile page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add profile page" />
+    <MESSAGE value="change url navigate domain" />
+    <option name="LAST_COMMIT_MESSAGE" value="change url navigate domain" />
   </component>
 </project>
