@@ -1,7 +1,7 @@
 {
   "name": "lab_manager_fe",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "homepage": "https://thiendekaco.github.io/",
   "dependencies": {
     "@garvae/react-pie-donut-chart": "^1.0.3",

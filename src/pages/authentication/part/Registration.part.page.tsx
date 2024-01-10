@@ -29,7 +29,7 @@ function Component({ className } : Props){
   //   getDoc();
   // },[])
   const onNavigateToHome =  useCallback(()=>{
-    navigate('/home')
+    navigate('/')
   },[navigate])
 
   return(

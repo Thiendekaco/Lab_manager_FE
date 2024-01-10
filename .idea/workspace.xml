@@ -4,32 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6679f9e8-d042-49ed-90bf-22c1cafb362e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/edit/ProfileEdit.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/postItem/PostItemProfileResearch.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/postItem/PostItemProfileUser.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/profile/Profile.page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/profile/part/CommonProfile.part.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/profile/part/FollowerProfile.part.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/profile/part/LaboratoryProfile.part.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/profile/part/ResearchProfile.part.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/research/ResearchDetail.page.tsx" afterDir="false" />
+    <list default="true" id="6679f9e8-d042-49ed-90bf-22c1cafb362e" name="Changes" comment="add profile page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/carousel/Carousel.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel/Carousel.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostCardLaboratory.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostCardLaboratory.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratory.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratory.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemMember.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemMember.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostModMember.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostModMember.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/Theme.constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Theme.constant.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/laboratories/part/Navigation.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/laboratories/part/Navigation.part.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/laboratories/part/body/Mod.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/laboratories/part/body/Mod.part.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/navigate/Header.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigate/Header.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/authentication/part/Confirm.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authentication/part/Confirm.part.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/authentication/part/Reform.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authentication/part/Reform.part.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/authentication/part/Registration.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authentication/part/Registration.part.page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routers/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/router.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Component.types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Component.types.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Theme.types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Theme.types.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,23 +66,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/temp/Reactjs-project2/lab_manager_fe/src/components/progress&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Admin\\Documents\\temp\\Reactjs-project2\\lab_manager_fe\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "source",
+    "last_opened_file_path": "C:/Users/Admin/Documents/temp/Reactjs-project2/lab_manager_fe/src/components/progress",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\Admin\\Documents\\temp\\Reactjs-project2\\lab_manager_fe\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="source" />
+    </force-push-targets>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Documents\temp\Reactjs-project2\lab_manager_fe\src\components\progress" />
@@ -271,7 +258,63 @@
       <option name="project" value="LOCAL" />
       <updated>1704651953703</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add profile page">
+      <option name="closed" value="true" />
+      <created>1704902654059</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704902654059</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add profile page">
+      <option name="closed" value="true" />
+      <created>1704903051594</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704903051594</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add profile page xxfxgfcg">
+      <option name="closed" value="true" />
+      <created>1704903289949</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704903289949</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change package.json">
+      <option name="closed" value="true" />
+      <created>1704903946578</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704903946578</updated>
+    </task>
+    <task id="LOCAL-00009" summary="change package.json">
+      <option name="closed" value="true" />
+      <created>1704904253852</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704904253852</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add profile page">
+      <option name="closed" value="true" />
+      <created>1704904683834</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704904683834</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add profile page">
+      <option name="closed" value="true" />
+      <created>1704904984650</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1704904984650</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +336,9 @@
     <MESSAGE value="Create list lab page success" />
     <MESSAGE value="Create list lab mod page success" />
     <MESSAGE value="Create list lab about, authentication page success" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create list lab about, authentication page success" />
+    <MESSAGE value="add profile page xxfxgfcg" />
+    <MESSAGE value="change package.json" />
+    <MESSAGE value="add profile page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add profile page" />
   </component>
 </project>

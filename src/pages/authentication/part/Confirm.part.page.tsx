@@ -39,7 +39,7 @@ function Component ({ className}: Props){
 
 
   const onNavigateToHome =  useCallback(()=>{
-    navigate('/home')
+    navigate('/')
   },[navigate])
 
 

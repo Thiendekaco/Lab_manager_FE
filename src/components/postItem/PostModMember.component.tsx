@@ -29,7 +29,7 @@ function Component (props :PropsPostModMemberInterface) {
 
 
   const onCLickToProfileUser = useCallback(()=>{
-    navigate(`/home/profile/${name}`)
+    navigate(`/profile/${name}`)
   },[name, navigate])
 
 
