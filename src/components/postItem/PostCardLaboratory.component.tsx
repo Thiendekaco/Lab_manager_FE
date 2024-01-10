@@ -162,7 +162,7 @@ export const PostCardLaboratory_nonAnimation = styled(Component)<PropsPostInterf
 })
 
 export const PostCardLaboratory = styled(PostCardLaboratory_nonAnimation)`
-  animation: ${fadeStart} 1s ease-in-out ;
+  animation: ${scaleButton} 1s ease-in-out ;
   
   &:hover ._button-icon {
     animation: ${fadeInRight} 1s cubic-bezier(0,.5,0,1);

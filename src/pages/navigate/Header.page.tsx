@@ -113,7 +113,7 @@ export function Component ( { className} : Props) {
         <div className={
           CN('_navigation_box')}>
           <Link className={'_navigation_item -link'}
-                to={'/headline'}
+                to={'headline'}
                 id={'Headline'}
                 onMouseEnter={(e) => onMouseEnter(e)}
                 onMouseLeave={(e) =>onMouseLeave(e)}
@@ -122,7 +122,7 @@ export function Component ( { className} : Props) {
             <span className={'-dropdownIcon'}/>
           </Link>
           <Link className={'_navigation_item -link'}
-                to={'/research'}
+                to={'research'}
                 id={'Research'}
                 onMouseEnter={(e) => onMouseEnter(e)}
                 onMouseLeave={onMouseLeave}
@@ -131,7 +131,7 @@ export function Component ( { className} : Props) {
             <span className={'-dropdownIcon'}/>
           </Link>
           <Link className={'_navigation_item -link'}
-                to={'/laboratories'}
+                to={'laboratories'}
                 id={'Laboratories'}
                 onMouseEnter={(e) => onMouseEnter(e)}
                 onMouseLeave={(e) =>onMouseLeave(e)}
@@ -140,7 +140,7 @@ export function Component ( { className} : Props) {
             <span className={'-dropdownIcon'}/>
           </Link>
           <Link className={'_navigation_item -link'}
-                to={'/ranked'}
+                to={'ranked'}
                 id={'Ranking'}
                 onMouseEnter={(e) => onMouseEnter(e)}
                 onMouseLeave={(e) =>onMouseLeave(e)}

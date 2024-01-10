@@ -30,6 +30,8 @@ export  const THEME_TOKEN_DEFAULT: GlobalToken = {
   colorBgGreen1: '#134e3b',
   colorBgMix: 'linear-gradient(270deg, #4aaed3 0%, #4aaed3 6.4102564103%, #4ac4d3 23.8461538462%, #89f2b8 76.1538461538%, #bef2dc 87.1794871795%, #bef2dc 100%), url("https://www.shibaura-it.ac.jp/assets/img/common/_noise.svg")',
   colorTransparent: 'rgba(0, 0, 0, 0.1)',
+  borderColor : '#d0d7de',
+
   lineWidth: 10,
   lineWidthMD: 5,
   lineWidthSM: 20,

@@ -140,7 +140,7 @@ function Component ( { className } : Props ) {
                     onDeny={handleListModResearch}
                     onAccept={handleListModResearch} /> }
     />
-  }, [handleListModMember])
+  }, [handleListModResearch])
 
 
 

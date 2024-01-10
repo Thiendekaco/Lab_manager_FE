@@ -2,6 +2,7 @@
   "name": "lab_manager_fe",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://thiendekaco.github.io/",
   "dependencies": {
     "@garvae/react-pie-donut-chart": "^1.0.3",
     "@testing-library/jest-dom": "^5.17.0",
@@ -15,7 +16,9 @@
     "axios": "^1.6.2",
     "classnames": "^2.3.2",
     "copy-to-clipboard": "^3.3.3",
+    "easymde": "^2.18.0",
     "file-saver": "^2.0.5",
+    "gh-pages": "^6.1.1",
     "i": "^0.3.7",
     "i18next": "^23.7.8",
     "npm": "^10.2.5",
@@ -23,6 +26,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^13.5.0",
+    "react-markdown": "^9.0.1",
     "react-router": "^6.20.1",
     "react-router-dom": "^6.20.1",
     "react-scripts": "^5.0.1",
@@ -39,7 +43,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": [

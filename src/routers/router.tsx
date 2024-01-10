@@ -13,6 +13,11 @@ import {ConfirmPart} from "../pages/authentication/part/Confirm.part.page";
 import {ReformPart} from "../pages/authentication/part/Reform.part.page";
 import {AuthenticationSignUp} from "../pages/authentication/SignUp.pages";
 import {RegistrationPart} from "../pages/authentication/part/Registration.part.page";
+import {ProfilePage} from "../pages/profile/Profile.page";
+import { ResearchProfilePart } from "../pages/profile/part/ResearchProfile.part";
+import {FollowerProfilePart} from "../pages/profile/part/FollowerProfile.part";
+import {LaboratoryProfilePart} from "../pages/profile/part/LaboratoryProfile.part";
+import {ResearchDetailPage} from "../pages/research/ResearchDetail.page";
 
 const Router = () => {
 
@@ -23,8 +28,9 @@ const Router = () => {
           {/*<Route path={"headline/*"} element={<Headline />} >*/}
           {/*  /!*<Route path={"postItem"} element={<New />} />*!/*/}
           {/*</Route>*/}
-          <Route path={"research/*"} element={<ResearchPage />} >
-          {/*  <Route path={"detail"} element={<DetailResearch />} />*/}
+          <Route path={"research/*"} >
+            <Route index={true} element={<ResearchPage />} />
+            <Route path={":research"} element={<ResearchDetailPage />} />
           {/*  <Route path={"modResearch"} element={<ModResearch />} />*/}
           </ Route>
           <Route path={"laboratories/*"}>
@@ -36,11 +42,11 @@ const Router = () => {
               <Route path={"about"} element={<AboutLaboratoryPartPage/>} />
             </Route>
           </Route>
-        {/*  <Route path={"/profile/*"} element={<Profile />} >*/}
-        {/*    <Route path={"detail"} element={<DetailProfile />} />*/}
-        {/*    <Route path={"research"} element={<ProfileResearch />} />*/}
-        {/*    <Route path={"follow"} element={<Follow />} />*/}
-        {/*  </Route>*/}
+          <Route path={"profile/:user/*"} element={<ProfilePage />} >
+            <Route index={true} element={<ResearchProfilePart />} />
+            <Route path={"laboratory"} element={<LaboratoryProfilePart />} />
+            <Route path={"follow"} element={<FollowerProfilePart />} />
+          </Route>
 
         {/*  <Route path={"/ranked/*"} element={<Ranked />} >*/}
         {/*    <Route path={"authorRanked"} element={<AuthorRanked />} />*/}

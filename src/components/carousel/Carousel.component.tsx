@@ -82,7 +82,7 @@ export default function Component(props : PropsCarouselInterface) {
     return ()=> {
       clearInterval(interval);
     }
-  }, [content.length, isLeft, tabsBox, tabsBoxWrapper]);
+  }, [content.length, isLeft, props.className_, tabsBox, tabsBoxWrapper]);
 
   return (
 

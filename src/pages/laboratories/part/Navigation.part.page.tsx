@@ -68,7 +68,8 @@ export const NavigationLaboratoryPart = styled(Component)<Props>(({theme : {toke
 
       '&:hover': {
         backgroundColor: token.colorBgSecondary,
-        borderBottom: '3px solid black'
+        borderBottom: '3px solid black',
+        boxShadow: '10px 20px 20px 10px rgba(0, 0, 0, 0.2)',
       }
     },
 

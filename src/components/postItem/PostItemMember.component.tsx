@@ -26,8 +26,8 @@ function Component (props :PropsPostMemberInterface) {
   const navigate = useNavigate();
 
 
-  const onCLickToLaboratory = useCallback(()=>{
-    navigate(`${name}`)
+  const onCLickToProfileUser = useCallback(()=>{
+    navigate(`/home/profile/${name}`)
   },[name, navigate])
 
   const onClickToOpenOption = useCallback(()=>{
@@ -40,7 +40,7 @@ function Component (props :PropsPostMemberInterface) {
     <div className={CN(className, {
       '_desktop' : isWebUI,
       '_mobile' : !isWebUI,
-    }, 'post-member')}>
+    }, 'post-member')} onClick={onCLickToProfileUser}>
       <img src={image} alt={image} className={'__posts-member-logo'} />
 
       <div className={'__post-member-content'}>
@@ -84,6 +84,7 @@ export const PostMember_nonAnimation = styled(Component)<PropsPostMemberInterfac
       height: 90,
       margin: 'auto',
       width: '100%',
+      cursor: 'pointer',
 
 
 

@@ -17,6 +17,7 @@ export type ResearchType = {
   subTitle : string,
   activity ?: string,
   research ?: React.ReactNode,
+  laboratory ?: LaboratoryType
   description ?: string,
   admin : string
 }
@@ -35,6 +36,25 @@ export type LaboratoryType = {
   top ?: number,
   country ?: string,
   activity ?: ActivityInterface[]
+}
+
+export interface SocialProfile {
+  facebook ?: string,
+  telegram ?: string,
+  custom_1 ?: string,
+  custom_2 ?: string
+}
+
+export type UserProfile = {
+  image : string,
+  name: string,
+  location ?: string,
+  createAt ?: string,
+  school ?: string,
+  country ?: string,
+  social ?: SocialProfile
+  research ?: ResearchType[],
+  laboratory ?: LaboratoryType[]
 }
 
 
