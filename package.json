@@ -1,8 +1,8 @@
 {
   "name": "lab_manager_fe",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://thiendekaco.github.io/Lab_manager_FE/",
+  "private": false,
+  "homepage": "https://thiendekaco.github.io/",
   "dependencies": {
     "@garvae/react-pie-donut-chart": "^1.0.3",
     "@testing-library/jest-dom": "^5.17.0",
