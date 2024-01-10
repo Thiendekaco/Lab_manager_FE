@@ -28,8 +28,8 @@ function Component (props :PropsPostModMemberInterface) {
   const navigate = useNavigate();
 
 
-  const onCLickToLaboratory = useCallback(()=>{
-    navigate(`${name}`)
+  const onCLickToProfileUser = useCallback(()=>{
+    navigate(`/home/profile/${name}`)
   },[name, navigate])
 
 
@@ -37,7 +37,7 @@ function Component (props :PropsPostModMemberInterface) {
     <div className={CN(className, {
       '_desktop' : isWebUI,
       '_mobile' : !isWebUI,
-    }, 'post-member')}>
+    }, 'post-member')} onClick={onCLickToProfileUser}>
       <img src={image} alt={image} className={'__posts-member-logo'} />
 
       <div className={'__post-member-content'}>
@@ -71,6 +71,7 @@ export const PostModMember_nonAnimation = styled(Component)<PropsPostModMemberIn
       borderRadius: 20,
       border: '1px solid',
       borderColor: token.colorBgSecondary,
+      cursor: 'pointer',
       boxShadow: '1px 1px 3px rgba(0,0,0,0.1)',
 
 

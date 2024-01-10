@@ -25,7 +25,7 @@ function Component (props :PropsPostInterface) {
 
 
   const onCLickToLaboratory = useCallback(()=>{
-    navigate(`${name}`)
+    navigate(`/home/laboratories/${name}`)
   },[name, navigate])
 
   return(

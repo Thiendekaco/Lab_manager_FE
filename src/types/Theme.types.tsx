@@ -40,6 +40,7 @@ export interface GlobalToken {
   colorBgYellow: string,
   colorBgBlue2: string,
   colorBgBlue3: string,
+  borderColor: string,
 
   lineWidth: number,
   lineWidthMD: number,
