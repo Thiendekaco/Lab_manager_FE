@@ -134,6 +134,7 @@ export const ProfilePage = styled(Component)<Props>(({ theme: {token}})=>{
     marginTop: 250,
     padding: '0px 84px',
     justifyContent: 'space-between',
+    gap: token.paddingMD,
 
     '.__profile-content': {
       display: 'flex',

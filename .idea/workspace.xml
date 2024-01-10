@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6679f9e8-d042-49ed-90bf-22c1cafb362e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostModMember.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostModMember.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemMember.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemMember.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/Profile.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/Profile.page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,8 +98,18 @@
       <recent name="C:\Users\Admin\Documents\temp\Reactjs-project2\lab_manager_fe\src\pages\laboratories\part" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.deploy">
+  <component name="RunManager" selected="npm.build">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -122,6 +134,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
@@ -316,7 +329,31 @@
       <option name="project" value="LOCAL" />
       <updated>1704905633574</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="change url navigate domain">
+      <option name="closed" value="true" />
+      <created>1704905907183</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1704905907183</updated>
+    </task>
+    <task id="LOCAL-00014" summary=".........">
+      <option name="closed" value="true" />
+      <created>1704906135718</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1704906135718</updated>
+    </task>
+    <task id="LOCAL-00015" summary=".........,.....">
+      <option name="closed" value="true" />
+      <created>1704907060226</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1704907060226</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +379,8 @@
     <MESSAGE value="change package.json" />
     <MESSAGE value="add profile page" />
     <MESSAGE value="change url navigate domain" />
-    <option name="LAST_COMMIT_MESSAGE" value="change url navigate domain" />
+    <MESSAGE value="........." />
+    <MESSAGE value=".........,....." />
+    <option name="LAST_COMMIT_MESSAGE" value=".........,....." />
   </component>
 </project>

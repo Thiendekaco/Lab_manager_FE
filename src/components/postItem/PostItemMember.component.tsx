@@ -27,7 +27,7 @@ function Component (props :PropsPostMemberInterface) {
 
 
   const onCLickToProfileUser = useCallback(()=>{
-    navigate(`/home/profile/${name}`)
+    navigate(`/profile/${name}`)
   },[name, navigate])
 
   const onClickToOpenOption = useCallback(()=>{
