@@ -6,8 +6,7 @@ import {useTranslation} from "react-i18next";
 import {LaboratoryList} from "../list/ListLaboratory.component";
 import {useCallback} from "react";
 import {PostLaboratoryMini} from "../postItem/PostItemLaboratoryMini.component";
-import { User } from "phosphor-react";
-import {RoleEnum, RoleIcon} from "../../constants/Role.constant";
+import { RoleIcon} from "../../constants/Role.constant";
 
 
 interface Props extends ThemeProps {
@@ -62,6 +61,9 @@ function Component ({className} : Props) {
   const { t } = useTranslation();
   const { token } = useTheme() as Theme;
 
+
+
+
   const renderItem = useCallback((content : LaboratoryType)=>{
 
     return(
@@ -69,25 +71,28 @@ function Component ({className} : Props) {
     )
   },[]);
   return (
-    <div className={CN(className)}>
-      <div className={'__side-bar-left-profile'}>
-        <div className={'__profile-logo'}>
+    <>
+      <div className={CN(className)}>
+        <div className={'__side-bar-left-profile'}>
+          <div className={'__profile-logo'}>
 
+          </div>
+          <div className={'__profile-role'}>
+            {t('Member')}{RoleIcon['member']}
+          </div>
         </div>
-        <div className={'__profile-role'}>
-          {t('Member')}{RoleIcon['member']}
+        <ButtonShape label={t('Creat new Laboratory')} backgroundColorHover={token.colorBgRed} />
+        <div className={'__side-bar-left-your-lab'}>
+          <div className={'__your-lab-label'}>
+            {t('Your Laboratory')}
+          </div>
+          <div className={'__your-lab-list'}>
+            <LaboratoryList list={doc} renderItem={renderItem} />
+          </div>
         </div>
       </div>
-        <ButtonShape label={t('Creat new Laboratory')} backgroundColorHover={token.colorBgRed}/>
-      <div className={'__side-bar-left-your-lab'}>
-        <div className={'__your-lab-label'}>
-          {t('Your Laboratory')}
-        </div>
-        <div className={'__your-lab-list'}>
-          <LaboratoryList list={doc} renderItem={renderItem} />
-        </div>
-      </div>
-    </div>
+    </>
+
   )
 }
 

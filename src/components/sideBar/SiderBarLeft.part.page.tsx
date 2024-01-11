@@ -2,12 +2,10 @@ import {LaboratoryType, Theme, ThemeProps} from "../../types";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
 import {Eye, EyeSlash, Buildings, Users} from "phosphor-react";
-import {Button} from "../button/Button.component";
 import {useTranslation} from "../../hook";
 import {ButtonShape} from "../button/ButtonShape.component";
-import {useCallback} from "react";
-import {PostLaboratory} from "../postItem/PostItemLaboratory.component";
-import {fadeRight, fadeStart, scaleButton} from "../../styles/styles.animation";
+
+import {scaleButton} from "../../styles/styles.animation";
 
 
 interface Props extends ThemeProps {

@@ -14,7 +14,7 @@ function Component({ className } : Props){
 
 
   return(
-    <div className={CN(className)}>
+    <div className={CN(className, 'icon-wrapper')}>
       <div className={'_icon-logo-wrap'}>
         <img className={'_icon-logo'} src={image} alt={image}/>
       </div>

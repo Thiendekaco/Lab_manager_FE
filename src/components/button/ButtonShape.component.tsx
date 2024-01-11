@@ -8,7 +8,7 @@ import {ArrowRight} from "phosphor-react";
 
 interface Props extends ThemeProps {
   icon ?: React.ReactNode,
-  label ?: string,
+  label ?: string| React.ReactNode,
   backgroundColor ?: string,
   backgroundColorHover ?: string,
   colorTextChange ?: string,
@@ -47,6 +47,10 @@ export const ButtonShape = styled(Component)<Props>(({theme: {token}, color, bac
     borderColor: 'transparent',
     cursor: 'pointer',
     transition: 'all .3s ease-in-out',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent : 'center',
+    gap: token.padding,
 
     '&:hover': {
       backgroundColor: backgroundColorHover || token.colorTextDark,

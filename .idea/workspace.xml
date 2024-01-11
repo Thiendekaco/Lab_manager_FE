@@ -4,10 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6679f9e8-d042-49ed-90bf-22c1cafb362e" name="Changes" comment="">
+    <list default="true" id="6679f9e8-d042-49ed-90bf-22c1cafb362e" name="Changes" comment=".........,.....">
+      <change afterPath="$PROJECT_DIR$/src/components/modal/baseModal.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/modal/createNewResearchModal.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemMember.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemMember.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/Profile.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/Profile.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button/ButtonShape.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/ButtonShape.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icon/Automotive.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icon/Automotive.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icon/Health.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icon/Health.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostCardLaboratory.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostCardLaboratory.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemResearch.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemResearch.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sideBar/SideBarRight.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/SideBarRight.part.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sideBar/SiderBarLeft.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/SiderBarLeft.part.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/authentication/part/Registration.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authentication/part/Registration.part.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/navigate/Naviagation.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigate/Naviagation.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/research/ResearchDetail.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/research/ResearchDetail.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.animation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.animation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,23 +77,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "source",
-    "last_opened_file_path": "C:/Users/Admin/Documents/temp/Reactjs-project2/lab_manager_fe/src/components/progress",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\Admin\\Documents\\temp\\Reactjs-project2\\lab_manager_fe\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;source&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/temp/Reactjs-project2/lab_manager_fe/src/components/progress&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Admin\\Documents\\temp\\Reactjs-project2\\lab_manager_fe\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="source" />
@@ -232,6 +247,10 @@
       <workItem from="1704857465718" duration="3112000" />
       <workItem from="1704869957110" duration="11000" />
       <workItem from="1704895629380" duration="2644000" />
+      <workItem from="1704939124557" duration="12173000" />
+      <workItem from="1704957195547" duration="26000" />
+      <workItem from="1704957322494" duration="65000" />
+      <workItem from="1704980381532" duration="13559000" />
     </task>
     <task id="LOCAL-00001" summary="Create Research page success">
       <option name="closed" value="true" />
@@ -353,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704907060226</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary=".........,.....">
+      <option name="closed" value="true" />
+      <created>1704907417194</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1704907417194</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

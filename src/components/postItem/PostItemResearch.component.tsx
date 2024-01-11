@@ -7,6 +7,7 @@ import {ScreenContext} from "../../context/Screen.context";
 import {Button} from "../button/Button.component";
 import {ArrowRight} from "phosphor-react";
 import {fadeInRight} from "../../styles/styles.animation";
+import {useNavigate} from "react-router";
 
 
 
@@ -20,10 +21,14 @@ function Component (props : PropsPostInterface) {
   const { isWebUI } = useContext(ScreenContext)
   const { content : {title, activity, subTitle, admin, research, description, image }, className } = props;
   const { token } = useTheme() as Theme;
+  const navigate = useNavigate();
 
+  const onClickToNavigate = useCallback(()=>{
+    navigate(`/research/${title}-${admin}`)
+  }, [admin, navigate, title])
 
   return(
-    <div className={CN(className, 'post-item-laboratory')} >
+    <div className={CN(className, 'post-item-laboratory')} onClick={onClickToNavigate}>
       <div className={'_post-item-title'}>
         {title}
       </div>
@@ -71,6 +76,7 @@ export const PostItemResearch_nonAnimation = styled(Component)<PropsPostInterfac
       border: '1px solid ',
       borderColor: token.colorBgSecondary,
       boxSizing: 'border-box',
+      cursor: 'pointer',
       '._post-item-content': {
         display: "flex",
         flexDirection: 'column',

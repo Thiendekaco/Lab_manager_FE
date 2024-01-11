@@ -5,6 +5,7 @@ import React, {} from "react";
 import { Outlet } from "react-router-dom";
 import {HeaderPage} from "./Header.page";
 import {FooterPage} from "./Footer.page";
+import {CreateNewResearchModal} from "../../components/modal/createNewResearchModal.component";
 
 
 type Props = ThemeProps ;
@@ -22,6 +23,7 @@ export function Component ( { className} : Props) {
       <HeaderPage />
       <Outlet />
       <FooterPage />
+      {/*<CreateNewResearchModal />*/}
     </>
 )}
 
