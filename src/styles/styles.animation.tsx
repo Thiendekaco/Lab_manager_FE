@@ -42,6 +42,26 @@ export const fadeStart = keyframes({
 })
 
 
+export const fadeFinish = keyframes({
+  '0%' :{
+    height: '100%',
+    opacity: 1,
+  },
+  '1%': {
+    transform: 'scaleY(1.2)',
+    opacity: 0.5,
+  },
+  '50%': {
+    transform: 'scaleY(1.1)',
+    opacity: 0.5,
+  },
+  '100%': {
+    transform: 'scaleY(1)',
+    opacity: 1,
+  }
+})
+
+
 
 export const fadeInRight = keyframes({
   '0%': {

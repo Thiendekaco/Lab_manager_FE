@@ -52,7 +52,7 @@ function Component({ className } : Props){
                 <span className='registration_step'>Buớc 1/3</span>
                 <h3 className='registration_title'>{'ahsdbhasdbbbbb'}</h3>
                 <span className='registration_detail'>{'asjbdhhhhaksdjkkkkkkasjd'}</span>
-                <Link to={`/signUp/reform${location.search}`}>
+                <Link to={`/signUp/reform${location.search}`} style={{ textDecoration: 'none'}}>
                     <ButtonShape className='registration_btn' label={'Next'}/>
                 </Link>
             </div>
@@ -76,7 +76,6 @@ function Component({ className } : Props){
       width: '100%',
       padding: 'auto',
       margin: 'auto',
-
       position: 'fixed',
     '.registration_box': {
         position: 'relative',
@@ -110,6 +109,7 @@ function Component({ className } : Props){
           borderRadius: 10,
           backgroundColor: token.colorBgGreen,
           color: token.colorBgLight,
+          textDecoration: 'none',
           fontWeight: 600,
           fontSize: 'x-large'
         }

@@ -1,5 +1,5 @@
 import {ContentType, ResearchType, Theme, ThemeProps} from "../../types";
-import React, {useContext} from "react";
+import React, {useCallback, useContext} from "react";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
 
@@ -10,6 +10,7 @@ import {fadeDown, fadeInRight, fadeStart, scaleButton} from "../../styles/styles
 
 import {ReactionComponent} from "../reaction/Reaction.component";
 import {HeaderPostComponent} from "../header-post/HeaderPost.component";
+import {useNavigate} from "react-router";
 
 
 
@@ -24,13 +25,18 @@ function Component (props : PropsPostInterface) {
   const { isWebUI } = useContext(ScreenContext)
   const { footer, content : {title, activity, subTitle, admin, research, description, image }, className } = props;
   const { token } = useTheme() as Theme;
+  const navigate = useNavigate();
+
+  const onClickToNavigate = useCallback(()=>{
+    navigate(`/research/${title}-${admin}`)
+  }, [admin, navigate, title])
 
   return(
-    <div className={CN(className, 'post-item-laboratory')}>
-      <div className={'_post-item-title'}>
+    <div className={CN(className, 'post-item-laboratory')} >
+      <div className={'_post-item-title'} onClick={onClickToNavigate}>
           <HeaderPostComponent image={'https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-6/399356655_228679893564845_4690910822546452853_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeGUZ_pcqHbpsre7aCCeIIB0hBtKen5BU4uEG0p6fkFTi1M9UHdY05BdFOFI5r-HV1PMAQ4DxcTKC9NPUSOCj13e&_nc_ohc=wAmCXjmSpLEAX_UAkG5&_nc_ht=scontent.fhan19-1.fna&oh=00_AfCBskRz833nSgmP_lqHhZ5YqTdWi7zMEiMAIHDAhkDvJw&oe=6597A97B'} role={'admin'} author={'thiendekaco'} />
       </div>
-      <div className={'_post-item-content'}>
+      <div className={'_post-item-content'} onClick={onClickToNavigate}>
         <div className={'_post-item-introduce'}>
           <img className={'_post-item-logo'} src={image} alt={image} />
           <div className={'_post-item-info'}>
@@ -71,6 +77,7 @@ export const PostCardLaboratory_nonAnimation = styled(Component)<PropsPostInterf
       margin: 'auto',
       border: '1px solid ',
       borderColor: token.colorBgSecondary,
+      cursor: 'pointer',
       boxSizing: 'border-box',
       backgroundColor: 'white',
       boxShadow: '10px 8px 24px -8px rgba(0,0,0,.04), 1px 1px 1px rgba(0,0,0,0.04)',
