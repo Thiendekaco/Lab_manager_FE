@@ -130,9 +130,9 @@ function Component({theme, className} : Props) {
             </div>
           </div>
           <Carousel content={[
-            {link : 'something', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
-            {link : 'something', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
-            {link : 'something', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
+            {link : 'News', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
+            {link : 'Research', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
+            {link : 'Laboratories', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
             {link : 'something', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
             {link : 'something', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
             {link : 'something', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'}

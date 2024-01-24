@@ -28,25 +28,82 @@ const Logo = require('../../assets/images/HustLogo.ico');
 
 interface Props extends ThemeProps {}
 
+export const ContentI : ContentOptionType = {
+  option: 'Robotics',
+  link: '',
+}
+export const ContentII : ContentOptionType = {
+  option: 'Mechanical',
+  link: '',
+}
+export const ContentIII : ContentOptionType = {
+  option: 'Network',
+  link: '',
+}
+export const ContentIV : ContentOptionType = {
+  option: 'Software',
+  link: '',
+}
+export const ContentV : ContentOptionType = {
+  option: 'Hardware',
+  link: '',
+}
+export const ContentVI : ContentOptionType = {
+  option: 'Automotive',
+  link: '',
+}
+export const ContentVII : ContentOptionType = {
+  option: 'Chemical',
+  link: '',
+}
+export const ContentVIII : ContentOptionType = {
+  option: 'Biotechnology',
+  link: '',
+}
+export const ContentIX : ContentOptionType = {
+  option: 'AI',
+  link: '',
+}
+export const ContentX : ContentOptionType = {
+  option: 'Communication',
+  link: '',
+}
+
+export const Content1 : ContentOptionType = {
+  option: 'News',
+  link: 'https://lab-manager.vercel.app',
+}
+export const Content2 : ContentOptionType = {
+  option: 'Research',
+  link: 'https://lab-manager.vercel.app/research',
+}
+export const Content3 : ContentOptionType = {
+  option: 'Laboratories',
+  link: 'https://lab-manager.vercel.app/laboratories',
+}
 export const Content : ContentOptionType = {
   option: 'Something',
-  link: '/something',
+  link: '',
 }
 
 export const groupContent : GroupOptionType = {
   label: 'Sometimes',
-  options: [Content, Content, Content]
+  options: [Content1, Content2, Content3]
 }
 
 export const groupContent2 : GroupOptionType = {
   label: 'Sometimes123',
-  options: [Content, Content, Content]
+  options: [ContentI, ContentII, ContentIII,ContentIV,ContentV,ContentVI,ContentVII, ContentVIII,ContentIX, ContentX]
+}
+export const groupContent3 : GroupOptionType = {
+  label: 'Sometimes1234',
+  options: [Content, Content, Content,Content,Content]
 }
 
 export const objectGroupContent : Record<string, GroupOptionType[]> = {
   Headline : [groupContent],
-  Research: [groupContent, groupContent2],
-  Laboratories: [groupContent, groupContent, groupContent2],
+  Research: [ groupContent2],
+  Laboratories: [groupContent3],
   Ranking: [groupContent]
 }
 

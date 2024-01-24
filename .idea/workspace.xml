@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6679f9e8-d042-49ed-90bf-22c1cafb362e" name="Changes" comment=".........,.....">
-      <change afterPath="$PROJECT_DIR$/src/components/modal/baseModal.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/modal/createNewResearchModal.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/button/ButtonShape.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/ButtonShape.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/icon/Automotive.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icon/Automotive.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/icon/Health.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icon/Health.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostCardLaboratory.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostCardLaboratory.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemResearch.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemResearch.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sideBar/SideBarRight.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/SideBarRight.part.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sideBar/SiderBarLeft.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/SiderBarLeft.part.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/authentication/part/Registration.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authentication/part/Registration.part.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/Home.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/laboratories/part/body/ResearchListLaboratory.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/laboratories/part/body/ResearchListLaboratory.part.page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/navigate/Header.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigate/Header.page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/navigate/Naviagation.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigate/Naviagation.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/research/ResearchDetail.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/research/ResearchDetail.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.animation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.animation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/research/Research.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/research/Research.page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="source" />
+        <entry key="$PROJECT_DIR$" value="minhbui" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,7 +70,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;source&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;minhbui123&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/temp/Reactjs-project2/lab_manager_fe/src/components/progress&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -113,8 +101,8 @@
       <recent name="C:\Users\Admin\Documents\temp\Reactjs-project2\lab_manager_fe\src\pages\laboratories\part" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
-    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+  <component name="RunManager" selected="JavaScript Debug.Debug Application">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="https://lab-manager.vercel.app/">
       <method v="2" />
     </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -147,6 +135,12 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="npm.npm start" />
+      <item itemvalue="npm.build" />
+      <item itemvalue="npm.deploy" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.build" />
@@ -251,6 +245,10 @@
       <workItem from="1704957195547" duration="26000" />
       <workItem from="1704957322494" duration="65000" />
       <workItem from="1704980381532" duration="13559000" />
+      <workItem from="1705853235371" duration="10025000" />
+      <workItem from="1705931446154" duration="9105000" />
+      <workItem from="1705996831608" duration="7865000" />
+      <workItem from="1706024622868" duration="2499000" />
     </task>
     <task id="LOCAL-00001" summary="Create Research page success">
       <option name="closed" value="true" />
@@ -391,7 +389,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="minhbui123" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
