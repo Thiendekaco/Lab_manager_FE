@@ -1,48 +1,47 @@
-import {LaboratoryType, Theme, ThemeProps} from "../../types";
+import {LabMemberInterface, LaboratoryInterface, Theme, ThemeProps} from "../../types";
 import React, {useCallback, useContext} from "react";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
 import {Badge} from "../badge/Badge.component";
 import {useTranslation} from "../../hook";
 import {ScreenContext} from "../../context/Screen.context";
-import { GlobeHemisphereWest, Buildings, Users   } from 'phosphor-react'
-import {fadeInRight} from "../../styles/styles.animation";
+import { GlobeHemisphereWest, Buildings  } from 'phosphor-react'
 import {useNavigate} from "react-router";
 
 
 
 interface PropsPostInterface extends ThemeProps {
-  content : LaboratoryType
+  content : LabMemberInterface | LaboratoryInterface
 }
 
 
 function Component (props :PropsPostInterface) {
   const { t } = useTranslation();
   const { isWebUI } = useContext(ScreenContext)
-  const { content : { name, status, country, location, activity, image }, className } = props;
+  const { content : { nameLab, country, location, logo }, className } = props;
   const { token } = useTheme() as Theme;
   const navigate = useNavigate();
 
 
   const onCLickToLaboratory = useCallback(()=>{
-    navigate(`/laboratories/${name}`)
-  },[name, navigate])
+    navigate(`/laboratories/${nameLab}`)
+  },[nameLab, navigate])
 
   return(
     <div className={CN(className, {
       '_desktop' : isWebUI,
       '_mobile' : !isWebUI,
     }, 'post-item')} onClick={onCLickToLaboratory}>
-      <img src={image} alt={image} className={'__posts-item-logo'} />
+      <img src={logo} alt={logo} className={'__posts-item-logo'} />
 
       <div className={'__post-item-content'}>
         <div className={'__post-item-left'}>
           <div className={'__post-item-info'}>
             <div className={'__post-item-name-lab'}>
-              {name}
+              {nameLab}
             </div>
             <div className={'_post-item-badge'}>
-              <Badge content={status} background={"#4274b7"} />
+              <Badge content={'Private'} background={"#4274b7"} />
             </div>
           </div>
           <div className={'__post-item-place'}>
@@ -55,11 +54,6 @@ function Component (props :PropsPostInterface) {
               {t(country)}
             </div>}
           </div>
-        </div>
-        <div className={'__post-item-right'}>
-          { activity?.map((a) => (
-            <img src={a.image} alt={a.image} id={a.value} className={'__post-item-activity'}/>
-          ))}
         </div>
       </div>
     </div>

@@ -49,7 +49,7 @@ function Component({theme, className} : Props) {
   const renderItemImage = useCallback((content : ContentType, className : string)=>{
 
     return(
-      <img className={className} src={content.image}  alt={content.image} />
+      <img className={className} src={content.image} width={350} height={200} alt={content.image} />
     )
   },[])
 
@@ -81,14 +81,9 @@ function Component({theme, className} : Props) {
             </div>
           </div>
         </div>
-        <iframe className={'_homepage-video'}
-                src={urlYtbHome}
-                frameBorder={0}
-                width={'100%'}
-                height={'120%'}
-                allow={"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"}
-                allowFullScreen
-        />
+        <video width="1400px" height="100%" autoFocus={true} loop={true} autoPlay={true} controls={true} muted={true}>
+          <source src={urlYtbHome} type="video/mp4" />
+        </video>
         <div className={'_homepage-video-label'} >
         </div>
       </div>
@@ -97,7 +92,7 @@ function Component({theme, className} : Props) {
         <div className={'_carousel-content'}>
           <div className={'_homepage_carousel-label'}>
             <h2 className={CN('_homepage_carousel-title')}>{t('Special Contents')}</h2>
-            <p className={CN('_homepage_carousel-content')}>{t('SIT is the only private university of science and technology selected for the Japanese government\'s exclusive Top Global University Project.')}</p>
+            <p className={CN('_homepage_carousel-content')}>{t('HUST is the only private university of science and technology selected for the Japanese government\'s exclusive Top Global University Project.')}</p>
             <div className={'_group-button'} style={{display: 'flex', gap: token.paddingMD}}>
               <Button size={"lg"} onClick={onClickToTurnRightImg} isRadius={true}
                       backgroundColor={"transparent"}
@@ -131,11 +126,11 @@ function Component({theme, className} : Props) {
           </div>
           <Carousel content={[
             {link : 'something', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
-            {link : 'something', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
-            {link : 'something', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
-            {link : 'something', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
-            {link : 'something', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'},
-            {link : 'something', image: 'https://www.shibaura-it.ac.jp/assets/img/pages/home/spe_1_ban_en.jpg'}
+            {link : 'something', image: 'https://firebasestorage.googleapis.com/v0/b/crwn-clothing-123btt.appspot.com/o/bach-khoa1-700x410.jpg?alt=media&token=36e66373-8461-4690-b7de-f8eb8e83920e'},
+            {link : 'something', image: 'https://firebasestorage.googleapis.com/v0/b/crwn-clothing-123btt.appspot.com/o/GTBKHN3.jpg?alt=media&token=6debef96-70bc-4cb3-b276-cbe9ebfd93c0'},
+            {link : 'something', image: 'https://firebasestorage.googleapis.com/v0/b/crwn-clothing-123btt.appspot.com/o/PTN5.jfif?alt=media&token=340dc398-1044-4dfc-8ec5-caaeec75d923'},
+            {link : 'something', image: 'https://firebasestorage.googleapis.com/v0/b/crwn-clothing-123btt.appspot.com/o/PTN2.jpg?alt=media&token=04a5bded-fb44-4a88-8647-2418eca3c218'},
+            {link : 'something', image: 'https://firebasestorage.googleapis.com/v0/b/crwn-clothing-123btt.appspot.com/o/PTN4.jfif?alt=media&token=df48070b-fcdf-4f6b-9c29-04c641234ac7'}
           ]}
                     turnLeft={turnLeftImage}
                     turnRight={turnRightImage}
@@ -238,25 +233,25 @@ function Component({theme, className} : Props) {
         </div>
       </div>
       <Empty />
-      <Introduction image={'https://www.shibaura-it.ac.jp/assets/img/pages/home/abo_img_pc.jpg'} route={'/123'} description={'Nurturing practical\n' +
+      <Introduction image={'https://firebasestorage.googleapis.com/v0/b/crwn-clothing-123btt.appspot.com/o/bach-khoa1-700x410.jpg?alt=media&token=36e66373-8461-4690-b7de-f8eb8e83920e'} route={'/123'} description={'Nurturing practical\n' +
         'engineers who learn\n' +
         'from the world and\n' +
         'contribute to the world'}
-        label={'About SIT'}
-        footer={[{link: '/something', title: 'hehehe'}, {link: '/something', title: 'hehehe'}]}
+        label={'About HUST'}
+        footer={[{link: '/something', title: 'More thing'}, {link: '/something', title: 'New Update'}]}
       />
-      <Introduction image={'https://www.shibaura-it.ac.jp/assets/img/pages/home/abo_img_pc.jpg'} route={'/123'} description={'Nurturing practical\n' +
+      <Introduction image={'https://firebasestorage.googleapis.com/v0/b/crwn-clothing-123btt.appspot.com/o/bach-khoa1-700x410.jpg?alt=media&token=36e66373-8461-4690-b7de-f8eb8e83920e'} route={'/123'} description={'Nurturing practical\n' +
         'engineers who learn\n' +
         'from the world and\n' +
         'contribute to the world'}
-        label={'About SIT'}
-        footer={[{link: '/something', title: 'hehehe'}, {link: '/something', title: 'hehehe'}, {link: '/something', title: 'hehehe'}]}
+        label={'One Love'}
+        footer={[{link: '/something', title: 'More thing'}, {link: '/something', title: 'New Update'}, {link: '/something', title: 'Headline'}]}
       />
-      <Introduction image={'https://www.shibaura-it.ac.jp/assets/img/pages/home/abo_img_pc.jpg'} route={'/123'} description={'Nurturing practical\n' +
+      <Introduction image={'https://firebasestorage.googleapis.com/v0/b/crwn-clothing-123btt.appspot.com/o/bach-khoa1-700x410.jpg?alt=media&token=36e66373-8461-4690-b7de-f8eb8e83920e'} route={'/123'} description={'Nurturing practical\n' +
         'engineers who learn\n' +
         'from the world and\n' +
         'contribute to the world'}
-        label={'About SIT'}
+        label={'One Future'}
 
       />
       <div className={'_home-list-video'}>
@@ -297,6 +292,7 @@ export const HomePage = styled(Component)<Props>(({ theme: { token },  }: Props)
   return {
     '&._homepage-container': {
       display: "flex",
+      overflow: 'hidden',
       flexDirection: 'column',
       gap: token.paddingMD,
       width: '100vw',

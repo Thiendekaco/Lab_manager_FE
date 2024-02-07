@@ -1,12 +1,14 @@
-import {LaboratoryType, Theme, ThemeProps} from "../../types";
+import {Theme, ThemeProps, LabMemberInterface, LaboratoryInterface} from "../../types";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
 import {ButtonShape} from "../button/ButtonShape.component";
 import {useTranslation} from "react-i18next";
 import {LaboratoryList} from "../list/ListLaboratory.component";
-import {useCallback} from "react";
+import {useCallback, useEffect, useState} from "react";
 import {PostLaboratoryMini} from "../postItem/PostItemLaboratoryMini.component";
 import { RoleIcon} from "../../constants/Role.constant";
+import {useSelector} from "react-redux";
+import {selectMember} from "../../store/member/member.selector";
 
 
 interface Props extends ThemeProps {
@@ -14,57 +16,16 @@ interface Props extends ThemeProps {
 }
 
 
-const doc : LaboratoryType[] = [
-  {
-    image : 'https://i.stack.imgur.com/OTS4d.png?s=128',
-    status : 'private',
-    name: 'SEEE lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }, {
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'Hust lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }, {
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'jasbdhasbd lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }]
-  },
-]
-
-
 function Component ({className} : Props) {
   const { t } = useTranslation();
   const { token } = useTheme() as Theme;
+  const member = useSelector(selectMember)
+  const [ currentLabList , setCurrentLablist ] = useState<LabMemberInterface[]>(member?.laboratories || [])
 
-
-
-
-  const renderItem = useCallback((content : LaboratoryType)=>{
+  useEffect(() => {
+    setCurrentLablist(member?.laboratories || [])
+  }, [member?.laboratories]);
+  const renderItem = useCallback((content : LabMemberInterface | LaboratoryInterface)=>{
 
     return(
       <PostLaboratoryMini content={content}/>
@@ -87,7 +48,7 @@ function Component ({className} : Props) {
             {t('Your Laboratory')}
           </div>
           <div className={'__your-lab-list'}>
-            <LaboratoryList list={doc} renderItem={renderItem} />
+            <LaboratoryList list={currentLabList} renderItem={renderItem} />
           </div>
         </div>
       </div>

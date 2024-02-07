@@ -1,12 +1,12 @@
-import {LaboratoryType, ThemeProps} from "../../types";
+import {LabMemberInterface, LaboratoryInterface, ThemeProps} from "../../types";
 import styled from "styled-components";
 import CN from "classnames";
 import React from "react";
 
 
 interface Props extends ThemeProps {
-  renderItem : (content : LaboratoryType)=> React.ReactNode;
-  list : LaboratoryType[];
+  renderItem : (content : LabMemberInterface | LaboratoryInterface)=> React.ReactNode;
+  list : LabMemberInterface[] | LaboratoryInterface[];
 };
 
 

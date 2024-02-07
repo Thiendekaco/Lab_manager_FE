@@ -1,9 +1,8 @@
-import {LaboratoryType, ThemeProps} from "../../types";
+import {LaboratoryInterface, ThemeProps} from "../../types";
 import styled from "styled-components";
 import CN from "classnames";
 import {useTranslation} from "../../hook";
 import {useParams} from "react-router";
-import {PostLaboratory} from "../../components/postItem/PostItemLaboratory.component";
 import {useContext, useEffect, useState} from "react";
 import {HeaderLaboratory} from "./part/HeaderLaboratory.page";
 import {SideBarLeftPart} from "../../components/sideBar/SideBarRight.part.page";
@@ -11,6 +10,9 @@ import {SideBarRightPart} from "../../components/sideBar/SiderBarLeft.part.page"
 import {NavigationLaboratoryPart} from "./part/Navigation.part.page";
 import {Outlet} from "react-router-dom";
 import {ScreenContext} from "../../context/Screen.context";
+import {useSelector} from "react-redux";
+import {selectListLab, selectListLabReducer} from "../../store/laboratories/laboratories.selector";
+import {selectMember} from "../../store/member/member.selector";
 
 
 interface Props extends ThemeProps{};
@@ -21,162 +23,22 @@ type LaboratoryTypeParam = {
 }
 
 
-const doc : LaboratoryType[] = [
-  {
-    image : 'https://i.stack.imgur.com/OTS4d.png?s=128',
-    status : 'private',
-    name: 'SEEE lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }, {
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'Hust lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }, {
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'jasbdhasbd lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'aaaaaaaaaaa lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity: [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'bcbcbc lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }, {
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'SEEE lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }, {
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'SEEE lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'SEEE lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'SEEE lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }, {
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'SEEE lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }, {
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'SEEE lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }, {
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    }]
-  }
-]
+
 
 
 function Component ( { className } : Props){
   const { t } = useTranslation();
   const { laboratory } = useParams<LaboratoryTypeParam>();
-  const [ laboratory_, setLaboratory ] = useState<LaboratoryType>()
+  const laboratories = useSelector(selectListLab);
+
+
+  const [ laboratory_, setLaboratory ] = useState<LaboratoryInterface | undefined>(laboratories.find((l)=> l.nameLab === laboratory))
   const { isWebUI } = useContext(ScreenContext);
   const param = useParams();
 
   useEffect(() => {
-    setLaboratory(doc.find((d)=> d.name === laboratory))
-  }, [laboratory]);
+    setLaboratory(laboratories.find((l)=> l.nameLab === laboratory));
+  }, [laboratories, laboratory]);
 
   return(
    <div className={CN(className, 'laboratory')}>

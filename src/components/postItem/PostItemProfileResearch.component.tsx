@@ -1,4 +1,4 @@
-import {LaboratoryType, MemberType, ResearchType, Theme, ThemeProps} from "../../types";
+import {  ResearchType, Theme, ThemeProps} from "../../types";
 import React, {useCallback, useContext, useState} from "react";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
@@ -8,7 +8,6 @@ import {ScreenContext} from "../../context/Screen.context";
 import {useNavigate} from "react-router";
 
 import {fadeDown, fadeStart} from "../../styles/styles.animation";
-import {ModAction} from "../reaction/ModAction.component";
 
 
 

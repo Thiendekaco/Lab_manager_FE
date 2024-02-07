@@ -1,4 +1,4 @@
-import { MemberType, Theme, ThemeProps, UserProfile } from "../../types";
+import {Member, MemberType, Theme, ThemeProps, UserProfile} from "../../types";
 import styled, {useTheme} from "styled-components";
 import {useCallback, useMemo, useState} from "react";
 import CN from "classnames";
@@ -12,10 +12,10 @@ import { Buildings,
         Link,
         Calendar
 } from "phosphor-react";
-import {fadeDown, fadeEnd, fadeStart} from "../../styles/styles.animation";
+import { fadeStart} from "../../styles/styles.animation";
 
 interface Props extends ThemeProps {
-  content : UserProfile;
+  content : Member;
   isShowEdit : boolean
 };
 
@@ -48,23 +48,23 @@ interface FormInterface {
 
 function Component ({ className, content, isShowEdit } : Props){
   const [ isEdit, setIsEdit ] = useState<boolean>(false);
-  const { name, school, social, country, createAt, location, image, laboratory} = content;
+  const { name, university, age, logo, laboratories} = content;
   const { t } = useTranslation();
   const { token } = useTheme() as Theme;
 
   const initilaValue = useMemo(()=>{
     return {
-      [FormItemEnum.NAME_ITEM] : name,
-      [FormItemEnum.SCHOOL_ITEM] : school,
-      [FormItemEnum.ADDRESS] : location,
-      [FormItemEnum.COUNTRY] : country,
-      [FormItemEnum.SOCIAL_FACEBOOK] : social?.facebook,
-      [FormItemEnum.SOCIAL_TELEGRAM] :  social?.telegram,
-      [FormItemEnum.SOCIAL_CUSTOM_1] : social?.custom_1,
-      [FormItemEnum.SOCIAL_CUSTOM_2] : social?.custom_2
+      [FormItemEnum.NAME_ITEM] : name || '',
+      [FormItemEnum.SCHOOL_ITEM] : university,
+      [FormItemEnum.ADDRESS] : 'Hanoi',
+      [FormItemEnum.COUNTRY] : 'VietNam',
+      [FormItemEnum.SOCIAL_FACEBOOK] : 'https:www.facebook.com',
+      [FormItemEnum.SOCIAL_TELEGRAM] :  'https:www.facebook.com',
+      [FormItemEnum.SOCIAL_CUSTOM_1] : 'https:www.facebook.com',
+      [FormItemEnum.SOCIAL_CUSTOM_2] : 'https:www.facebook.com'
     }
 
-  }, [country, location, name, school, social?.custom_1, social?.custom_2, social?.facebook, social?.telegram])
+  }, [name, university])
 
   const [ valueForm , setValueForm ] = useState<FormInterface>(initilaValue);
   const [ valueSave, setValueSave ] = useState<FormInterface>(initilaValue);
@@ -105,7 +105,7 @@ function Component ({ className, content, isShowEdit } : Props){
               <Calendar weight={'fill'} size={32} color={token.colorBgGreen}/>
               <input type={'text'}
                      className={'__form-input'}
-                     value={content.createAt}
+                     value={'20020-10-11'}
                      disabled={true}
              />
             </div>
@@ -191,7 +191,7 @@ function Component ({ className, content, isShowEdit } : Props){
             <div className={'__information-label'}>{ t('Information') }</div>
             <div className={'__information-group-content'}>
               <Calendar weight={'fill'} size={32} color={token.colorBgGreen}/>
-              <div className={'__information-content'}>{ content.createAt }</div>
+              <div className={'__information-content'}>{ '2020-10-11' }</div>
             </div>
             <div className={'__information-group-content'}>
               <Backpack weight={'fill'} size={32} color={token.colorBgGreen}/>

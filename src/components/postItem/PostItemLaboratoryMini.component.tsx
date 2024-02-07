@@ -1,4 +1,4 @@
-import {LaboratoryType, Theme, ThemeProps} from "../../types";
+import {LabMemberInterface, LaboratoryInterface, Theme, ThemeProps} from "../../types";
 import React, {useCallback, useContext} from "react";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
@@ -9,32 +9,32 @@ import {useNavigate} from "react-router";
 
 
 interface PropsPostInterface extends ThemeProps {
-  content : LaboratoryType
+  content : LabMemberInterface | LaboratoryInterface
 }
 
 
 function Component (props :PropsPostInterface) {
   const { t } = useTranslation();
   const { isWebUI } = useContext(ScreenContext)
-  const { content : { name, status, country, location, activity, image }, className } = props;
+  const { content : { nameLab, country, location, logo }, className } = props;
   const { token } = useTheme() as Theme;
   const navigate = useNavigate();
 
 
   const onCLickToLaboratory = useCallback(()=>{
-    navigate(`/laboratories/${name}`)
-  },[name, navigate])
+    navigate(`/laboratories/${nameLab}`)
+  },[nameLab, navigate])
 
   return(
     <div className={CN(className, {
       '_desktop' : isWebUI,
       '_mobile' : !isWebUI,
     }, 'post-item')} onClick={onCLickToLaboratory}>
-      <img src={image} alt={image} className={'__posts-item-logo'} />
+      <img src={logo} alt={logo} className={'__posts-item-logo'} />
 
       <div className={'__post-item-content'}>
         <div className={'__post-item-name-lab'}>
-          {name}
+          {nameLab}
         </div>
       </div>
     </div>

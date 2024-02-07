@@ -101,10 +101,10 @@ function Component (props : Props) {
                     id={'banner-1'}
                     description={'dhausgdysahduhsauhd uahsduhashd uashdhuahsud'}
             />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 1st'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 2st'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 3st'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 4st'} content={Doc} renderItem={renderItem} />
           </div>
 
           <div className={'_research-content-box'}>
@@ -114,10 +114,10 @@ function Component (props : Props) {
                     id={'banner-2'}
                     description={'dhausgdysahduhsauhd uahsduhashd uashdhuahsud'}
             />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 1st'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 2st'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 3st'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 4st'} content={Doc} renderItem={renderItem} />
           </div>
 
           <div className={'_research-content-box'}>
@@ -127,10 +127,10 @@ function Component (props : Props) {
                     id={'banner-3'}
                     description={'dhausgdysahduhsauhd uahsduhashd uashdhuahsud'}
             />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 1st'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 2st'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 3st'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 4st'} content={Doc} renderItem={renderItem} />
           </div>
 
 
@@ -141,10 +141,10 @@ function Component (props : Props) {
                     id={'banner-4'}
                     description={'dhausgdysahduhsauhd uahsduhashd uashdhuahsud'}
             />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
-            <Collapse label={'something'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 1st'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 2st'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 3st'} content={Doc} renderItem={renderItem} />
+            <Collapse label={'Ranking 4st'} content={Doc} renderItem={renderItem} />
           </div>
 
         </div>

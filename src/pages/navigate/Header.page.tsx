@@ -1,20 +1,15 @@
-import styled, {StyledObject, useTheme} from "styled-components";
+import styled, {useTheme} from "styled-components";
 import { useTranslation } from  '../../hook';
 import { ThemeProps } from "../../types";
 import React, {
-  AnchorHTMLAttributes,
-  MouseEventHandler,
   useCallback,
   useContext,
   useEffect,
-  useMemo,
   useState
 } from "react";
 import { ScreenContext } from "../../context/Screen.context";
 import {Link} from "react-router-dom";
 import CN from 'classnames';
-import { Outlet } from "react-router-dom";
-import { Substitute } from "styled-components/dist/types";
 import { Globe, MagnifyingGlass   } from "phosphor-react";
 import { Theme } from "../../types";
 import {
@@ -23,6 +18,11 @@ import {
   GroupOptionType
 } from "../../components/dropdown/DrodownNavigate.component";
 import {useNavigate} from "react-router";
+import {useDispatch, useSelector} from "react-redux";
+import { selectCurrentUser } from "../../store/user/user.selector";
+import {signOutStart} from "../../store/user/user.action";
+import {getListLabStart} from "../../store/laboratories/laboratories.action";
+
 const Logo = require('../../assets/images/HustLogo.ico');
 
 
@@ -63,7 +63,12 @@ export function Component ( { className} : Props) {
   const navigate = useNavigate();
   const [ contentOption, setContentOption ] = useState<GroupOptionType[]>([])
   const [isHover, setIsHover ] = useState<boolean>(false);
+  const dispatch = useDispatch();
+  const currentUser = useSelector(selectCurrentUser);
 
+  useEffect(() => {
+    dispatch(getListLabStart());
+  }, [dispatch]);
 
   const onNavigateToSignIn =  useCallback(()=>{
     navigate('/signIn')
@@ -71,6 +76,15 @@ export function Component ( { className} : Props) {
 
   const onNavigateToSignUp =  useCallback(()=>{
     navigate('/signUp')
+  },[navigate])
+
+  const onSignOut = useCallback(()=>{
+    dispatch(signOutStart())
+    window.location.reload();
+  }, [dispatch])
+
+  const onNavigateToMyProfile =  useCallback(()=>{
+    navigate('/profile/myProfile')
   },[navigate])
 
   const onMouseEnter = useCallback(( e : React.MouseEvent<HTMLAnchorElement>)=>{
@@ -87,7 +101,7 @@ export function Component ( { className} : Props) {
     if(isHover){
       setIsHover(false)
     }
-  }, [])
+  }, [isHover])
 
   const onMouseLeave = useCallback(( e : React.MouseEvent<HTMLAnchorElement>)=>{
     mouseLeaveX = e.clientX;
@@ -113,7 +127,7 @@ export function Component ( { className} : Props) {
         <div className={
           CN('_navigation_box')}>
           <Link className={'_navigation_item -link'}
-                to={'headline'}
+                to={'/'}
                 id={'Headline'}
                 onMouseEnter={(e) => onMouseEnter(e)}
                 onMouseLeave={(e) =>onMouseLeave(e)}
@@ -160,12 +174,25 @@ export function Component ( { className} : Props) {
           {t('Search')}
         </div>
 
-        <div className={'_navigation_item -login'} onClick={onNavigateToSignIn}>
-          {t('Login')}
-        </div>
-        <div className={'_navigation_item -signUp'} onClick={onNavigateToSignUp}>
-          {t('SignUp')}
-        </div>
+        {
+          currentUser ?
+          <>
+            <div className={CN('_navigation_item','-signOut')} onClick={onSignOut}>
+              {t('SignOut')}
+            </div>
+            <div className={CN('_navigation_item', '-profile')} onClick={onNavigateToMyProfile}>
+              <img src={currentUser.logo} alt={'logo user'}/>
+            </div>
+          </> :
+          <>
+            <div className={CN('_navigation_item', '-login')} onClick={onNavigateToSignIn}>
+              {t('Login')}
+            </div>
+            <div className={CN('_navigation_item', '-signUp')} onClick={onNavigateToSignUp}>
+              {t('SignUp')}
+            </div>
+          </>
+        }
       </div>
       <DropdownNavigate list={contentOption} isDropdown={isHover}/>
     </>
@@ -245,7 +272,7 @@ export const HeaderPage =  styled(Component)<Props>(({ theme: { token } }: Props
 
     },
 
-    '.-signUp, .-login': {
+    '.-signUp, .-login, .-signOut, .-profile': {
       cursor: 'pointer',
       transform: 'color .3s ease-in-out',
 

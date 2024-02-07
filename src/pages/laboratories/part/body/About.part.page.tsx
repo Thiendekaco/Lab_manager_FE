@@ -1,4 +1,4 @@
-import {LaboratoryType, Theme, ThemeProps} from "../../../../types";
+import { Theme, ThemeProps} from "../../../../types";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
 import {useTranslation} from "../../../../hook";
@@ -67,13 +67,13 @@ function Component ( {className} : Props ) {
         id: 'first',
         value: 30,
         color: token.colorBgBlue,
-        label: t('Bui Thanh Thien')
+        label: t('AI')
       },
       {
         id: 'second',
         value: 60,
         color: token.colorBgGreen,
-        label: t('Bui Nhat Minh')
+        label: t('Health')
       },
       {
         id: 'Other',

@@ -7,80 +7,14 @@ import {useTranslation} from "../../hook";
 import {useParams} from "react-router";
 import {HealthIcon, MedicalIcon} from "../../components/icon";
 import React from "react";
+import {useSelector} from "react-redux";
+import {selectMember} from "../../store/member/member.selector";
 
 
 interface Props extends ThemeProps {};
 
 
-const content: UserProfile = {
-  image : 'https://avatars.githubusercontent.com/u/139972251?s=400&v=4',
-  name: 'Thiendekaco',
-  location : '1 Đại Cồ Việt st, Hai Ba Trung',
-  createAt : '06/10/2023',
-  school : 'HUST',
-  country : 'Hanoi, VietName',
-  social : {
-    facebook: 'ahsbdhabsdas.com',
-    telegram: 'asbdhasbhasbd.com'
-  },
-  research : [{
-    title: 'hahaha',
-    subTitle: 'akakakaka',
-    image: 'https://www.shibaura-it.ac.jp/faculty/laboratory/img/thumbnail/tn_7d5bf6596da27b4a632d1d313d3c4f29_lab_img_1.jpg',
-    link : '123',
-    research : <HealthIcon />,
-    activity: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_3_orig.svg',
-    description : 'some thing like that  sadhjasvcasv usa dugsav dusavdasdwfyv d a aysd gasygd sadasgdyasgd asdgyasgdyadhsada ',
-    admin : 'Thien'
-  }, {  title: 'hahaha',
-    subTitle: 'akakakaka',
-    link : '123',
-    image: 'https://www.shibaura-it.ac.jp/faculty/laboratory/img/thumbnail/tn_7d5bf6596da27b4a632d1d313d3c4f29_lab_img_1.jpg',
-    research : <> <HealthIcon /> <MedicalIcon /> </>,
-    activity: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_3_orig.svg',
-    description : 'some thing like that',
-    admin : 'Thien'},
-    {  title: 'hahaha',
-      subTitle: 'akakakaka',
-      link : '123',
-      image: 'https://www.shibaura-it.ac.jp/faculty/laboratory/img/thumbnail/tn_7d5bf6596da27b4a632d1d313d3c4f29_lab_img_1.jpg',
-      research : <> <HealthIcon /> <MedicalIcon /> </>,
-      activity: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_3_orig.svg',
-      description : 'some thing like that',
-      admin : 'Thien'}
-  ],
-  laboratory : [
-    {
-      image : 'https://i.stack.imgur.com/nxdU4.png',
-      status : 'private',
-      name: 'SEEE lab',
-      location : '1 Đại Cồ Việt st, Hai Ba Trung',
-      country: 'Viet Nam',
-      activity : [{
-        image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-        value: 'Industry'
-      }, {
-        image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-        value: 'Education'
-      }]
-    },
-    {
-      image : 'https://i.stack.imgur.com/nxdU4.png',
-      status : 'private',
-      name: 'SEEE lab',
-      location : '1 Đại Cồ Việt st, Hai Ba Trung',
-      country: 'Viet Nam',
-      activity : [{
-        image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-        value: 'Industry'
-      }, {
-        image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-        value: 'Education'
-      },
-      ]
-    },
-  ]
-}
+
 
 
 
@@ -88,12 +22,15 @@ const content: UserProfile = {
 function Component({ className } : Props){
   const { t } = useTranslation();
   const param = useParams();
-
+  const member = useSelector(selectMember)
 
   return(
     <div className={CN(className)}>
       <div className={'__profile-side-bar'}>
-        <CommonProfilePart content={content} />
+        {
+          member && <CommonProfilePart content={member} />
+        }
+
       </div>
       <div className={'__profile-content'}>
         <div className={'__profile-navigate'}>

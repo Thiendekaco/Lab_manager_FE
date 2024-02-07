@@ -1,4 +1,4 @@
-import {LaboratoryType, ResearchType, ThemeProps} from "../../../types";
+import { ResearchType, ThemeProps} from "../../../types";
 import CN from "classnames";
 import styled from "styled-components";
 import {PostProfileResearch} from "../../../components/postItem/PostItemProfileResearch.component";

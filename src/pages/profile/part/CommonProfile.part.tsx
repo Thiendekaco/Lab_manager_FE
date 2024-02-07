@@ -1,4 +1,4 @@
-import {LaboratoryType, ResearchType, SocialProfile, ThemeProps, UserProfile} from "../../../types";
+import {Member, ResearchType, SocialProfile, ThemeProps, UserProfile} from "../../../types";
 import CN from "classnames";
 import styled from "styled-components";
 import { useTranslation } from "../../../hook";
@@ -6,7 +6,7 @@ import {ProfileEdit} from "../../../components/edit/ProfileEdit.component";
 import {useParams} from "react-router";
 
 interface Props extends ThemeProps {
-  content : UserProfile;
+  content : Member;
 };
 
 
@@ -15,13 +15,13 @@ interface Props extends ThemeProps {
 
 function Component ( { className, content } : Props) {
   const { t } = useTranslation();
-  const { image, name, createAt, laboratory, country, location} = content;
+  const { logo, name,  laboratories} = content;
  const { user } = useParams();
 
   return (
     <div className={CN(className)}>
       <div className={'__profile-user-image'}>
-        <img src={image} alt={image}/>
+        <img src={logo} alt={logo}/>
       </div>
       <div className={'__profile-edit'}>
         <ProfileEdit content={content} isShowEdit={ user === 'myProfile' }/>
@@ -30,10 +30,10 @@ function Component ( { className, content } : Props) {
       <div className={'__profile-laboratory-icon-group'}>
         <h2>{t('Laboratories')}</h2>
         {
-          laboratory?.map((value, index)=>
+          laboratories?.map((value, index)=>
             <img className={'__profile-laboratory-icon-map'}
-                  src={value.image || ''}
-                 alt={value.image || ''}
+                  src={value.logo || ''}
+                 alt={value.logo || ''}
                  key={index}
             />)
         }

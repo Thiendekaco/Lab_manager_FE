@@ -2,7 +2,8 @@ import { ThemeProps } from "../../types";
 import styled from "styled-components";
 import CN from "classnames";
 import React from "react";
-import {RoleEnum, RoleIcon} from "../../constants/Role.constant";
+import { RoleIcon } from "../../constants/Role.constant";
+import { RoleEnum } from "../../types";
 
 
 interface Props extends ThemeProps {
@@ -18,7 +19,6 @@ function Component({ className, author, image, role } : Props){
   return(
     <div className={CN(className, 'header-post')}>
       <div className={'_icon-logo-wrap'}>
-        <img className={'_icon-logo'} src={image} alt={image}/>
       </div>
       <span className={'header-name'}>{author}</span>
       <div className={'header-role'}>{RoleIcon[role as RoleEnum]}</div>

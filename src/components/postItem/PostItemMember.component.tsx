@@ -6,7 +6,8 @@ import {Badge} from "../badge/Badge.component";
 import {useTranslation} from "../../hook";
 import {ScreenContext} from "../../context/Screen.context";
 import {useNavigate} from "react-router";
-import {RoleEnum, RoleIcon} from "../../constants/Role.constant";
+import { RoleIcon} from "../../constants/Role.constant";
+import {RoleEnum} from "../../types";
 import {ButtonShape} from "../button/ButtonShape.component";
 import {fadeDown, fadeStart} from "../../styles/styles.animation";
 

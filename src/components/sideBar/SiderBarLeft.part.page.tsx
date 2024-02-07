@@ -1,4 +1,4 @@
-import {LaboratoryType, Theme, ThemeProps} from "../../types";
+import {LaboratoryInterface, Member, Theme, ThemeProps} from "../../types";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
 import {Eye, EyeSlash, Buildings, Users} from "phosphor-react";
@@ -6,10 +6,14 @@ import {useTranslation} from "../../hook";
 import {ButtonShape} from "../button/ButtonShape.component";
 
 import {scaleButton} from "../../styles/styles.animation";
+import {useDispatch, useSelector} from "react-redux";
+import {selectMember} from "../../store/member/member.selector";
+import {useCallback, useEffect, useState} from "react";
+import {joinLabStart, leaveLabStart} from "../../store/member/member.action";
 
 
 interface Props extends ThemeProps {
-  content : LaboratoryType;
+  content : LaboratoryInterface;
 }
 
 
@@ -18,8 +22,26 @@ interface Props extends ThemeProps {
 function Component  ({ className, content } : Props) {
   const { t } = useTranslation();
   const { token } = useTheme() as Theme;
+  const dispatch = useDispatch();
+  const currentMember = useSelector(selectMember);
+  const [ member, setMember ] = useState<Member | null>(currentMember);
+  const [ isJoinned, setIsJoinned ] = useState(false);
+  useEffect(() => {
+    setMember(currentMember);
+    setIsJoinned(!!member?.laboratories?.find((l) => l.nameLab === content.nameLab))
+  }, [content.nameLab, currentMember, member?.laboratories]);
 
+  const onJoinLab = useCallback(()=>{
+    if(member?.user?.email){
+      dispatch(joinLabStart(member?.user?.email, content.nameLab))
+    }
+  }, [content.nameLab, dispatch, member?.user?.email])
 
+  const onQuitLab = useCallback(()=>{
+    if(member?.user?.email){
+      dispatch(leaveLabStart(member?.user?.email, content.nameLab))
+    }
+  }, [content.nameLab, dispatch, member?.user?.email])
 
   return (
     <div className={CN(className, 'side-bar-right')}>
@@ -28,8 +50,8 @@ function Component  ({ className, content } : Props) {
              {t('About')}
            </h3>
             <div className={CN('__side-bar-status', '-text')}>
-              { content?.status === "public" ? <Eye  size={20} /> : <EyeSlash  size={20} /> }
-              { t(content.status.toUpperCase()) }
+               <EyeSlash  size={20} />
+              { 'PRIVATE' }
             </div>
             <div className={CN('__side-bar-location', '-text')}>
               <Buildings size={20} /> { t(content?.location || '') }
@@ -40,21 +62,25 @@ function Component  ({ className, content } : Props) {
           <ButtonShape backgroundColor={token.colorBgSecondary} label={t('More')} />
         </div>
         <div className={'__side-bar-right-group-button'}>
-          <div className={'__side-bar-right-join'}>
+          {!(member && isJoinned) ? <div className={'__side-bar-right-join'}>
             <ButtonShape label={t('Join')}
+                         onClick={onJoinLab}
                          backgroundColor={token.colorBgGreen1}
                          backgroundColorHover={token.colorBgGreen1}
                          colorTextChange={'white'}
                          color={'white'}
             />
           </div>
-          <div className={'__side-bar-right-quit'}>
-            <ButtonShape label={t('Quit')}
-                         backgroundColor={token.colorBgSecondary}
-                         backgroundColorHover={token.colorBgSecondary}
-                         colorTextChange={token.colorTextDark}
-            />
-          </div>
+            :
+            <div className={'__side-bar-right-quit'}>
+          <ButtonShape label={t('Quit')}
+                       onClick={onQuitLab}
+                       backgroundColor={token.colorBgSecondary}
+                       backgroundColorHover={token.colorBgSecondary}
+                       colorTextChange={token.colorTextDark}
+          />
+        </div>
+      }
         </div>
     </div>
   )

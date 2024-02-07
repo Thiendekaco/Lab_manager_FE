@@ -2,7 +2,7 @@ import {MemberType, ResearchType, ThemeProps} from "../../../../types";
 import styled from "styled-components";
 import CN from "classnames";
 import {useTranslation} from "../../../../hook";
-import {RoleEnum} from "../../../../constants/Role.constant";
+import { RoleEnum } from "../../../../types";
 import {MemberList} from "../../../../components/list/ListMember.component";
 import React, {useCallback, useEffect, useState} from "react";
 import {PostMember, PostMember_nonAnimation} from "../../../../components/postItem/PostItemMember.component";

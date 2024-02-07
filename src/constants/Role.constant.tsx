@@ -1,11 +1,8 @@
 import React from "react";
 import { Crown, Users, Ghost  } from "phosphor-react";
+import { RoleEnum } from "../types";
 
-export enum RoleEnum  {
-  ADMIN = 'admin',
-  MODER = 'moder',
-  MEMBER = 'member'
-}
+
 
 
 export const RoleIcon : Record<RoleEnum, React.ReactNode> = {

@@ -1,23 +1,23 @@
-import {LaboratoryType, ThemeProps} from "../../../types";
+import {LaboratoryInterface, ThemeProps} from "../../../types";
 import React, {useContext} from "react";
 import styled from "styled-components";
 import CN from "classnames";
 import {useTranslation} from "../../../hook";
 import {ScreenContext} from "../../../context/Screen.context";
 import { GlobeHemisphereWest, Buildings} from 'phosphor-react'
-import {useNavigate} from "react-router";
+
 
 
 
 interface PropsPostInterface extends ThemeProps {
-  content : LaboratoryType
+  content : LaboratoryInterface
 }
 
 
 function Component (props :PropsPostInterface) {
   const { t } = useTranslation();
   const { isWebUI } = useContext(ScreenContext)
-  const { content : { name, country, location, activity, image }, className } = props;
+  const { content : { nameLab, country, location, logo }, className } = props;
 
 
   return(
@@ -25,13 +25,13 @@ function Component (props :PropsPostInterface) {
       '_desktop' : isWebUI,
       '_mobile' : !isWebUI
     }, 'post-item')}>
-      <img src={image} alt={image} className={'__posts-item-logo'}/>
+      <img src={logo} alt={logo} className={'__posts-item-logo'}/>
 
       <div className={'__post-item-content'}>
         <div className={'__post-item-left'}>
           <div className={'__post-item-info'}>
             <div className={'__post-item-name-lab'}>
-              {name}
+              {nameLab}
             </div>
           </div>
           <div className={'__post-item-place'}>
@@ -45,11 +45,7 @@ function Component (props :PropsPostInterface) {
             </div>}
           </div>
         </div>
-        <div className={'__post-item-right'}>
-          { activity?.map((a) => (
-            <img src={a.image} alt={a.image} id={a.value} className={'__post-item-activity'}/>
-          ))}
-        </div>
+
       </div>
     </div>
   )

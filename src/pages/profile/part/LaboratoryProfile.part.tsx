@@ -1,53 +1,30 @@
-import {LaboratoryType, ThemeProps} from "../../../types";
+import {LabMemberInterface, LaboratoryInterface, ThemeProps} from "../../../types";
 import CN from "classnames";
 import styled from "styled-components";
 import {LaboratoryList} from "../../../components/list/ListLaboratory.component";
-import {useCallback} from "react";
+import {useCallback, useEffect, useState} from "react";
 import {PostLaboratory} from "../../../components/postItem/PostItemLaboratory.component";
+import {useSelector} from "react-redux";
+import {selectMember} from "../../../store/member/member.selector";
 
 
 
 interface Props extends ThemeProps {};
 
-const content : LaboratoryType[] = [
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'SEEE lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }, {
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    }]
-  },
-  {
-    image : 'https://i.stack.imgur.com/nxdU4.png',
-    status : 'private',
-    name: 'SEEE lab',
-    location : '1 Đại Cồ Việt st, Hai Ba Trung',
-    country: 'Viet Nam',
-    activity : [{
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_9_en_orig.svg',
-      value: 'Industry'
-    }, {
-      image: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_4_en_orig.svg',
-      value: 'Education'
-    },
-    ]
-  }
-]
+
 
 
 
 function Component({ className } : Props){
+  const member = useSelector(selectMember)
+  const [ currentLabList , setCurrentLablist ] = useState<LabMemberInterface[]>(member?.laboratories || [])
+
+  useEffect(() => {
+    setCurrentLablist(member?.laboratories || [])
+  }, [member?.laboratories]);
 
 
-
-  const renderItem = useCallback((content : LaboratoryType)=>{
+  const renderItem = useCallback((content : LabMemberInterface | LaboratoryInterface) : React.ReactNode=>{
 
     return(
       <PostLaboratory content={content}/>
@@ -58,7 +35,7 @@ function Component({ className } : Props){
 
   return(
     <div className={CN(className)}>
-      <LaboratoryList list={content} renderItem={renderItem} />
+      <LaboratoryList list={currentLabList} renderItem={renderItem} />
     </div>
   )
 }

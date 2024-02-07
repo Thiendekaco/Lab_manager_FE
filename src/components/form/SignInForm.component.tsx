@@ -6,8 +6,8 @@ import styled, {useTheme} from "styled-components";
 import CN from "classnames";
 import {ButtonShape} from "../button/ButtonShape.component";
 import {fadeDown, fadeStart} from "../../styles/styles.animation";
-// import { useDispatch } from 'react-redux';
-// import { signInStart } from '../../store/user/user.action';
+import { useDispatch } from "react-redux";
+import { emailSignInStart } from "../../store/user/user.action";
 
 
 interface Props extends ThemeProps{};
@@ -27,6 +27,7 @@ function Component ({className} : ThemeProps){
   const navigate = useNavigate()
   const { token } = useTheme() as Theme
   const {password, email} = formField
+  const dispatch = useDispatch();
   const handleInput = (e : React.ChangeEvent<HTMLInputElement>) =>{
     setFormField({...formField, [e.target.name] : e.target.value})
   }
@@ -59,7 +60,7 @@ function Component ({className} : ThemeProps){
       if(checkValid(e)){
         setFormField(defaultFormField)
         setErrorMessage(defauMessage)
-        // dispatch(signInStart(email, password))
+        dispatch(emailSignInStart(email, password))
         navigate('/')
       }else{
         setErrorMessage({
