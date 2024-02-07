@@ -23,7 +23,6 @@ export function Component ( { className} : Props) {
       <HeaderPage />
       <Outlet />
       <FooterPage />
-      {/*<CreateNewResearchModal />*/}
     </>
 )}
 
