@@ -5,66 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6679f9e8-d042-49ed-90bf-22c1cafb362e" name="Changes" comment="Add detail research page, modal create research">
-      <change afterPath="$PROJECT_DIR$/src/api/clientApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/laboratories/laboratories.action.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/laboratories/laboratories.reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/laboratories/laboratories.saga.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/laboratories/laboratories.selector.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/laboratories/laboratories.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/member/member.action.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/member/member.reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/member/member.saga.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/member/member.selector.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/member/member.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/root-reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/root-saga.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/user/user.action.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/user/user.reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/user/user.saga.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/user/user.selector.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/user/user.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/laboratory.types.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/member.types.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/post.types.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/user.types.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/firebase/firebase.utils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/reducer/reducer.utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/edit/ProfileEdit.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/edit/ProfileEdit.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/SignInForm.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/SignInForm.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-post/HeaderPost.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header-post/HeaderPost.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/list/ListLaboratory.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list/ListLaboratory.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratory.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratory.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratoryMini.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemLaboratoryMini.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemMember.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemMember.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postItem/PostItemProfileResearch.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/postItem/PostItemProfileResearch.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sideBar/SideBarRight.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/SideBarRight.part.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sideBar/SiderBarLeft.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/SiderBarLeft.part.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/Role.constant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Role.constant.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/Url.constant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Url.constant.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/Home.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/laboratories/Laboratories.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/laboratories/Laboratories.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/laboratories/Laboratory.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/laboratories/Laboratory.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/laboratories/part/HeaderLaboratory.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/laboratories/part/HeaderLaboratory.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/laboratories/part/body/About.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/laboratories/part/body/About.part.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/laboratories/part/body/MemberLaboratory.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/laboratories/part/body/MemberLaboratory.part.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/laboratories/part/body/Mod.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/laboratories/part/body/Mod.part.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/navigate/Header.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigate/Header.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/Profile.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/Profile.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/part/CommonProfile.part.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/part/CommonProfile.part.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/part/LaboratoryProfile.part.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/part/LaboratoryProfile.part.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/part/ResearchProfile.part.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/part/ResearchProfile.part.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/laboratories/part/body/ResearchListLaboratory.part.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/laboratories/part/body/ResearchListLaboratory.part.page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/research/Research.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/research/Research.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/research/ResearchDetail.page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/research/ResearchDetail.page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Component.types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/document.types.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Theme.types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/theme.types.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
