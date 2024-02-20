@@ -1,4 +1,4 @@
-import {MemberType, ResearchType, ThemeProps} from "../../../../types";
+import {MemberLabInterface, MemberType, PostOfMemberInterface, ResearchType, ThemeProps} from "../../../../types";
 import styled from "styled-components";
 import CN from "classnames";
 import {useTranslation} from "../../../../hook";
@@ -15,69 +15,16 @@ import {PostModMember} from "../../../../components/postItem/PostModMember.compo
 import {ifError} from "assert";
 import {AutomotiveIcon, HealthIcon, MedicalIcon} from "../../../../components/icon";
 import {ModAction} from "../../../../components/reaction/ModAction.component";
-import {PostItemResearch} from "../../../../components/postItem/PostItemResearch.component";
-import {PostItemCard} from "../../../../components/postItem/PostItemCard.component";
-import {ResearchListLaboratoryPartPage} from "./ResearchListLaboratory.part.page";
 import {ResearchLaboratoryList} from "../../../../components/list/ListResearchLaboratory.component";
+import {useDispatch, useSelector} from "react-redux";
+import {selectMemberPending, selectResearchPending} from "../../../../store/laboratory/laboratory.selector";
 
 
 interface Props extends ThemeProps {};
 
-const admin: MemberType[] = [{
-  name: 'thien1',
-  role: RoleEnum.ADMIN,
-  follow: [],
-  image: 'https://i.stack.imgur.com/OTS4d.png?s=128'
-},
-  {
-    name: 'thien2',
-    role: RoleEnum.ADMIN,
-    follow: [],
-    image: 'https://i.stack.imgur.com/OTS4d.png?s=128'
-  },
-  {
-    name: 'thien3',
-    role: RoleEnum.ADMIN,
-    follow: [],
-    image: 'https://i.stack.imgur.com/OTS4d.png?s=128'
-  }]
 
-const Doc: ResearchType[] =[
-  {
-    title: 'hahaha1',
-    subTitle: 'akakakaka',
-    image: 'https://www.shibaura-it.ac.jp/faculty/laboratory/img/thumbnail/tn_7d5bf6596da27b4a632d1d313d3c4f29_lab_img_1.jpg',
-    link : '123',
-    research : <HealthIcon />,
-    activity: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_3_orig.svg',
-    description : 'some thing like that  sadhjasvcasv usa dugsav dusavdasdwfyv d a aysd gasygd sadasgdyasgd asdgyasgdyadhsada ',
-    admin : 'Thien'
-  }, {  title: 'hahaha2',
-    subTitle: 'akakakaka',
-    link : '123',
-    image: 'https://www.shibaura-it.ac.jp/faculty/laboratory/img/thumbnail/tn_7d5bf6596da27b4a632d1d313d3c4f29_lab_img_1.jpg',
-    research : <> <HealthIcon /> <MedicalIcon /> </>,
-    activity: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_3_orig.svg',
-    description : 'some thing like that',
-    admin : 'Thien'
-  },
-  {  title: 'hahaha3',
-    subTitle: 'akakakaka',
-    link : '123',
-    image: 'https://www.shibaura-it.ac.jp/faculty/laboratory/img/thumbnail/tn_7d5bf6596da27b4a632d1d313d3c4f29_lab_img_1.jpg',
-    research : <HealthIcon />,
-    activity: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_3_orig.svg',
-    description : 'some thing like that',
-    admin : 'Thien'
-  },
-  {  title: 'hahaha4',
-    subTitle: 'akakakaka',
-    link : '123',
-    research : <> <HealthIcon /> < AutomotiveIcon/> <MedicalIcon /> </>,
-    activity: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_3_orig.svg',
-    description : 'some thing like that',
-    admin : 'Thien'
-  }]
+
+
 
 
 
@@ -86,8 +33,12 @@ const Doc: ResearchType[] =[
 
 function Component ( { className } : Props ) {
   const { t } = useTranslation();
-  const [ listMember, setListMember ] = useState<MemberType[]>(admin)
-  const [ listResearch, setlistResearch ] = useState<ResearchType[]>(Doc);
+  const listMember_ = useSelector(selectMemberPending);
+  const listResearch_ = useSelector(selectResearchPending);
+  const [ listMember, setListMember ] = useState<MemberLabInterface[]>(listMember_)
+  const [ listResearch, setlistResearch ] = useState<PostOfMemberInterface[]>(listResearch_);
+
+
 
   const handleListModMember = useCallback((nameItem : string)=>{
     setListMember(listMember.filter(({name}) => name !== nameItem))
@@ -97,42 +48,18 @@ function Component ( { className } : Props ) {
     setlistResearch(listResearch.filter(({title}) => title !== nameItem))
   }, [listResearch])
 
-  useEffect(() => {
-    if(listMember.length !== 3){
-      setListMember([...listMember,{
-        name: `thien!${Date.now()}`,
-        role: RoleEnum.MEMBER,
-        follow: [],
-        image: 'https://i.stack.imgur.com/OTS4d.png?s=128'
-      }])
-    }
-  }, [listMember]);
 
-  useEffect(() => {
-    if(listResearch.length !== 4){
-      setlistResearch([...listResearch,{  title: 'hahaha',
-        subTitle: `${Date.now()}`,
-        link : '123',
-        research : <> <HealthIcon /> < AutomotiveIcon/> <MedicalIcon /> </>,
-        activity: 'https://www.shibaura-it.ac.jp/assets/img/common/_ico_sdgs_3_orig.svg',
-        description : 'some thing like that',
-        admin : 'Thien'
-      }])
-    }
-  },  [listResearch]);
-
-
-  const renderItemMember =  useCallback((content : MemberType)=>{
+  const renderItemMember =  useCallback((content : MemberLabInterface)=>{
     return <PostModMember content={content}
                   footer={<ModAction
-                      nameFilter={content.name}
+                      nameFilter={content.name || content.user?.email || ''}
                      onNext={handleListModMember}
                      onDeny={handleListModMember}
                      onAccept={handleListModMember} /> }
     />
   }, [handleListModMember])
 
-  const renderItemResearch = useCallback((content : ResearchType)=>{
+  const renderItemResearch = useCallback((content : PostOfMemberInterface)=>{
     return <PostCardLaboratory content={content}
                   footer={<ModAction
                     nameFilter={content.title || ''}

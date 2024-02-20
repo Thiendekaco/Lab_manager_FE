@@ -1,6 +1,6 @@
 import { takeLatest, put, all, call } from 'typed-redux-saga/macro';
 
-import { LABORATORY_ACTION_TYPES } from "./laboratories.types";
+import { LABORATORIES_ACTION_TYPES } from "./laboratories.types";
 
 
 import {
@@ -36,11 +36,11 @@ export function* createNewLab({ payload : { lab, admin  }} : CreateNewLabStart) 
 }
 
 export function* onGetListAllLabs() {
-  yield* takeLatest(LABORATORY_ACTION_TYPES.GET_ALL_LABORATORY_START, getListLab);
+  yield* takeLatest(LABORATORIES_ACTION_TYPES.GET_ALL_LABORATORY_START, getListLab);
 }
 
 export function* onCreateNewLab() {
-  yield* takeLatest(LABORATORY_ACTION_TYPES.CREATE_LABORATORY_START, createNewLab);
+  yield* takeLatest(LABORATORIES_ACTION_TYPES.CREATE_LABORATORY_START, createNewLab);
 }
 
 

@@ -31,7 +31,7 @@ function Component (props : Props) {
   },[])
 
   const onCLickToProfile = useCallback(()=>{
-    navigate(`/home/profile/${name}`)
+    navigate(`/home/${name}`)
   },[name, navigate])
 
   return(

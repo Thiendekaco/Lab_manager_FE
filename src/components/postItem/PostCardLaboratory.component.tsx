@@ -1,4 +1,4 @@
-import {ContentType, ResearchType, Theme, ThemeProps} from "../../types";
+import {ContentType, PostOfMemberInterface, ResearchType, Theme, ThemeProps} from "../../types";
 import React, {useCallback, useContext} from "react";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
@@ -11,11 +11,12 @@ import {fadeDown, fadeInRight, fadeStart, scaleButton} from "../../styles/styles
 import {ReactionComponent} from "../reaction/Reaction.component";
 import {HeaderPostComponent} from "../header-post/HeaderPost.component";
 import {useNavigate} from "react-router";
+import {AutomotiveIcon, HealthIcon, MedicalIcon} from "../icon";
 
 
 
 interface PropsPostInterface extends ThemeProps {
-  content : ResearchType;
+  content : PostOfMemberInterface;
   footer ?: React.ReactNode;
 }
 
@@ -23,13 +24,12 @@ interface PropsPostInterface extends ThemeProps {
 function Component (props : PropsPostInterface) {
   const { t } = useTranslation();
   const { isWebUI } = useContext(ScreenContext)
-  const { footer, content : {title, activity, subTitle, admin, research, description, image }, className } = props;
+  const { footer, content : {title, subTitle, author, laboratory, logo, context,  }, className } = props;
   const { token } = useTheme() as Theme;
   const navigate = useNavigate();
-
   const onClickToNavigate = useCallback(()=>{
-    navigate(`/research/${title}-${admin}`)
-  }, [admin, navigate, title])
+    navigate(`/research/${title}-${author.user?.email}`)
+  }, [author, navigate, title])
 
   return(
     <div className={CN(className, 'post-item-laboratory')} >
@@ -38,10 +38,10 @@ function Component (props : PropsPostInterface) {
       </div>
       <div className={'_post-item-content'} onClick={onClickToNavigate}>
         <div className={'_post-item-introduce'}>
-          <img className={'_post-item-logo'} src={image} alt={image} />
+          <img className={'_post-item-logo'} src={logo} alt={logo} />
           <div className={'_post-item-info'}>
             <span className={'_post-item-description'}>
-              { description }
+              { title }
             </span>
           </div>
         </div>
@@ -51,12 +51,11 @@ function Component (props : PropsPostInterface) {
         <div className={'_post-item-research'}>
           <span className={'_post-item-label'}> {t('Research images')}</span>
           <div className={'_post-item-icon-research'}>
-            {research}
+            <> <HealthIcon /> < AutomotiveIcon/> <MedicalIcon /> </>
           </div>
         </div>
         <div className={'_post-item-activity'}>
           <span className={'_post-item-label'}>{t('This lab is for SDG activity')}</span>
-          <img src={activity} alt={activity} className={'_post-item-icon-activity'}/>
         </div>
       </div>
       {footer || <ReactionComponent/> }

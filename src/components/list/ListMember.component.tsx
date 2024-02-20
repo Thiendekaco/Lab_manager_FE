@@ -1,12 +1,12 @@
-import {MemberType, ThemeProps} from "../../types";
+import {MemberLabInterface, MemberType, ThemeProps} from "../../types";
 import styled from "styled-components";
 import CN from "classnames";
 import React from "react";
 
 
 interface Props extends ThemeProps {
-  renderItem : (content : MemberType)=> React.ReactNode;
-  list : MemberType[];
+  renderItem : (content : MemberLabInterface)=> React.ReactNode;
+  list : MemberLabInterface[];
 };
 
 

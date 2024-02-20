@@ -1,47 +1,49 @@
 import {LaboratoryInterface, ThemeProps} from "../../../types";
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import styled from "styled-components";
 import CN from "classnames";
 import {useTranslation} from "../../../hook";
 import {ScreenContext} from "../../../context/Screen.context";
 import { GlobeHemisphereWest, Buildings} from 'phosphor-react'
+import {useSelector} from "react-redux";
+import {selectLaboratory} from "../../../store/laboratory/laboratory.selector";
 
 
 
 
 interface PropsPostInterface extends ThemeProps {
-  content : LaboratoryInterface
+
 }
 
 
 function Component (props :PropsPostInterface) {
   const { t } = useTranslation();
   const { isWebUI } = useContext(ScreenContext)
-  const { content : { nameLab, country, location, logo }, className } = props;
-
+  const {  className } = props;
+  const laboratory = useSelector(selectLaboratory);
 
   return(
     <div className={CN(className, {
       '_desktop' : isWebUI,
       '_mobile' : !isWebUI
     }, 'post-item')}>
-      <img src={logo} alt={logo} className={'__posts-item-logo'}/>
+      <img src={laboratory?.logo} alt={laboratory?.logo} className={'__posts-item-logo'}/>
 
       <div className={'__post-item-content'}>
         <div className={'__post-item-left'}>
           <div className={'__post-item-info'}>
             <div className={'__post-item-name-lab'}>
-              {nameLab}
+              {laboratory?.nameLab}
             </div>
           </div>
           <div className={'__post-item-place'}>
-            {!!location && <div className={'__post-item-location'}>
+            {!!laboratory?.location && <div className={'__post-item-location'}>
                 <Buildings weight={"fill"} size={20}/>
-              {t(location)}
+              {t(laboratory?.location)}
             </div>}
-            {!!country && <div className={'__post-item-country'}>
+            {!!laboratory?.country && <div className={'__post-item-country'}>
                 <GlobeHemisphereWest weight={'fill'} size={20} />
-              {t(country)}
+              {t(laboratory?.country)}
             </div>}
           </div>
         </div>

@@ -1,5 +1,5 @@
 import {LabMemberInterface, LaboratoryInterface, Theme, ThemeProps} from "../../types";
-import React, {useCallback, useContext} from "react";
+import React, {useCallback, useContext, useEffect} from "react";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
 import {Badge} from "../badge/Badge.component";
@@ -7,6 +7,9 @@ import {useTranslation} from "../../hook";
 import {ScreenContext} from "../../context/Screen.context";
 import { GlobeHemisphereWest, Buildings  } from 'phosphor-react'
 import {useNavigate} from "react-router";
+import {useDispatch, useSelector} from "react-redux";
+import {setLabStart} from "../../store/laboratory/laboratory.action";
+import {selectLaboratory} from "../../store/laboratory/laboratory.selector";
 
 
 
@@ -17,15 +20,18 @@ interface PropsPostInterface extends ThemeProps {
 
 function Component (props :PropsPostInterface) {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
   const { isWebUI } = useContext(ScreenContext)
   const { content : { nameLab, country, location, logo }, className } = props;
   const { token } = useTheme() as Theme;
   const navigate = useNavigate();
+  const laboratory = useSelector(selectLaboratory);
 
 
   const onCLickToLaboratory = useCallback(()=>{
-    navigate(`/laboratories/${nameLab}`)
-  },[nameLab, navigate])
+    dispatch(setLabStart(nameLab));
+    navigate(`/laboratories/${nameLab}`);
+  },[dispatch, nameLab, navigate])
 
   return(
     <div className={CN(className, {

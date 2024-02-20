@@ -1,4 +1,4 @@
-import {MemberType, Theme, ThemeProps} from "../../types";
+import {MemberLabInterface, MemberType, Theme, ThemeProps} from "../../types";
 import React, {useCallback, useContext, useState} from "react";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
@@ -14,14 +14,14 @@ import {fadeDown, fadeStart} from "../../styles/styles.animation";
 
 
 interface PropsPostMemberInterface extends ThemeProps {
-  content : MemberType
+  content : MemberLabInterface
 }
 
 
 function Component (props :PropsPostMemberInterface) {
   const { t } = useTranslation();
   const { isWebUI } = useContext(ScreenContext)
-  const { content : { name, image, role }, className } = props;
+  const { content : { name, logo, role }, className } = props;
   const { token } = useTheme() as Theme;
   const [ isOpenOptionModal, setIsOpenOptionModal ] = useState(false);
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ function Component (props :PropsPostMemberInterface) {
       '_desktop' : isWebUI,
       '_mobile' : !isWebUI,
     }, 'post-member')} onClick={onCLickToProfileUser}>
-      <img src={image} alt={image} className={'__posts-member-logo'} />
+      <img src={logo} alt={logo} className={'__posts-member-logo'} />
 
       <div className={'__post-member-content'}>
         <div className={'__post-member-left'}>

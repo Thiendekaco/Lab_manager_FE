@@ -18,7 +18,7 @@ type ExstendPersisconfig = PersistConfig<RootState> & {
 const persistConfig : ExstendPersisconfig= {
   key: 'root',
   storage,
-  whitelist: [],
+  whitelist: ["laboratory", "member"],
 };
 
 declare global{

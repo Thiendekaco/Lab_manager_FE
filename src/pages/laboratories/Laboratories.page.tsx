@@ -33,9 +33,6 @@ function Component ( { className } : Props){
   const [ activityValue, setActivityValue ] = useState('all');
   const { t } = useTranslation();
 
-  useEffect(() => {
-    setListLab(listLabFetch)
-  }, [listLabFetch]);
 
   const onFilterLab = useCallback((e: ChangeEvent<HTMLInputElement>)=>{
     setFilterValue(e.target.value);
@@ -50,7 +47,7 @@ function Component ( { className } : Props){
   },[]);
 
   useEffect(() => {
-   let _doc = listLab.filter(({country, location, nameLab})=>
+   let _doc = listLabFetch.filter(({country, location, nameLab})=>
      nameLab.toLowerCase().includes(filterValue.toLowerCase()) ||
       location?.toLowerCase().includes(filterValue.toLowerCase()) ||
       country?.toLowerCase().includes(filterValue.toLowerCase())
@@ -58,7 +55,7 @@ function Component ( { className } : Props){
 
 
    setListLab(_doc);
-  }, [activityValue, filterValue, listLab, statusValue]);
+  }, [ listLabFetch, filterValue]);
 
   const renderItem = useCallback((content : LaboratoryInterface | LabMemberInterface)=>{
 

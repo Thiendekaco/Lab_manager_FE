@@ -57,7 +57,7 @@ function Component  ({ className, content } : Props) {
               <Buildings size={20} /> { t(content?.location || '') }
             </div>
             <div className={CN('__side-bar-members', '-text')}>
-              <Users size={20} /> 50 {t('members')}
+              <Users size={20} /> {content.laboratoryDetail?.members.length || 0} {t('members')}
             </div>
           <ButtonShape backgroundColor={token.colorBgSecondary} label={t('More')} />
         </div>

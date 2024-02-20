@@ -1,4 +1,4 @@
-import {MemberType, Theme, ThemeProps} from "../../types";
+import {MemberLabInterface, MemberType, Theme, ThemeProps} from "../../types";
 import React, {useCallback, useContext, useState} from "react";
 import styled, {useTheme} from "styled-components";
 import CN from "classnames";
@@ -14,7 +14,7 @@ import {ModAction} from "../reaction/ModAction.component";
 
 
 interface PropsPostModMemberInterface extends ThemeProps {
-  content : MemberType;
+  content : MemberLabInterface;
   footer ?: React.ReactNode
 }
 
@@ -22,7 +22,7 @@ interface PropsPostModMemberInterface extends ThemeProps {
 function Component (props :PropsPostModMemberInterface) {
   const { t } = useTranslation();
   const { isWebUI } = useContext(ScreenContext)
-  const { content : { name, image, role }, className, footer} = props;
+  const { content : { name, logo, role }, className, footer} = props;
   const { token } = useTheme() as Theme;
   const [ isOpenOptionModal, setIsOpenOptionModal ] = useState(false);
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ function Component (props :PropsPostModMemberInterface) {
       '_desktop' : isWebUI,
       '_mobile' : !isWebUI,
     }, 'post-member')} onClick={onCLickToProfileUser}>
-      <img src={image} alt={image} className={'__posts-member-logo'} />
+      <img src={logo} alt={logo} className={'__posts-member-logo'} />
 
       <div className={'__post-member-content'}>
         <div className={'__post-member-left'}>

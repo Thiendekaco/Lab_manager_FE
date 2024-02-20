@@ -1,12 +1,12 @@
-import { ResearchType, ThemeProps} from "../../types";
+import {PostOfMemberInterface, ResearchType, ThemeProps} from "../../types";
 import styled from "styled-components";
 import CN from "classnames";
 import React from "react";
 
 
 interface Props extends ThemeProps {
-  renderItem : (content : ResearchType)=> React.ReactNode;
-  list : ResearchType[];
+  renderItem : (content : PostOfMemberInterface)=> React.ReactNode;
+  list : PostOfMemberInterface[];
 };
 
 

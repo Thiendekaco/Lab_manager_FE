@@ -1,4 +1,4 @@
-import {Member} from "./member.types";
+import {Member, MemberLabInterface} from "./member.types";
 import {LaboratoryBaseInterface} from "./laboratory.types";
 
 
@@ -13,5 +13,6 @@ export interface PostBaseInteface {
 }
 
 export interface PostOfMemberInterface extends PostBaseInteface {
-  laboratory : LaboratoryBaseInterface
+  laboratory : LaboratoryBaseInterface,
+  author: MemberLabInterface
 }

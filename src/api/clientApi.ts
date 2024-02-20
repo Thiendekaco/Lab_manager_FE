@@ -1,6 +1,6 @@
 import axios from "axios";
 import {BASE_URL_REALTIME_DATA, BASE_URL_STATIC_DATA} from "../constants/Url.constant";
-import {LaboratoryInterface, Member, MemberBase, PostOfMemberInterface, UserDoc} from "../types";
+import {LaboratoryInterface, Member, MemberBase, PostOfMemberInterface, RoleEnum, UserDoc} from "../types";
 import {userSagas} from "../store/user/user.saga";
 
 export interface  clientAxiosProps {
@@ -122,6 +122,66 @@ export const findUserByEmail = async ( email: string) => {
     params: {
       email
     }
+  })
+}
+
+export const getLaboratory = async (nameLab: string) => {
+  return await client({
+    method: 'GET',
+    url: `/laboratories/${nameLab}`,
+    options: {}
+  })
+}
+
+export const getMemberPendingList = async (nameLab: string) => {
+  return await client({
+    method: 'GET',
+    url: `/laboratories/${nameLab}/members/pending`,
+    options: {}
+  })
+}
+
+
+export const getPostPendingList = async (nameLab: string) => {
+  return await client({
+    method: 'GET',
+    url: `/laboratories/${nameLab}/researches/pending`,
+    options: {}
+  })
+}
+
+
+export const acceptMemberJoinLab = async (email: string, nameLab: string) => {
+
+  return await client({
+    method: 'POST',
+    url: '/members/join',
+    options: {},
+    params: {
+      email,
+      lab: nameLab
+    }
+  })
+}
+
+export const updateRoleMember = async ( email: string, lab: string, role: RoleEnum)=> {
+  return await client({
+    method: 'POST',
+    url: '/members/role',
+    options: {},
+    params: {
+      email,
+      role,
+      lab
+    }
+  })
+}
+
+export const getResearchByLaboratory = async ( nameLab: string )=> {
+  return await client({
+    method: 'GET',
+    url: `/laboratories/${nameLab}/researches`,
+    options: {}
   })
 }
 

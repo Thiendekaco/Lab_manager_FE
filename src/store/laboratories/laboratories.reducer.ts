@@ -1,7 +1,7 @@
 
 
 import { AnyAction } from 'redux';
-import { LaboratoryState } from "../../types";
+import { LaboratoriesState } from "../../types";
 import {
   createNewLabSuccess,
   getListLabSuccess,
@@ -9,7 +9,7 @@ import {
 
 
 
-const INITIAL_STATE: LaboratoryState = {
+const INITIAL_STATE: LaboratoriesState = {
   listLab: [],
   isLoading: false,
   error: null,
@@ -17,7 +17,7 @@ const INITIAL_STATE: LaboratoryState = {
 
 export const laboratoriesReducer = (
   state = INITIAL_STATE,
-  action: AnyAction): LaboratoryState => {
+  action: AnyAction): LaboratoriesState => {
 
   if(getListLabSuccess.match(action)){
     return { ...state, listLab: action.payload };

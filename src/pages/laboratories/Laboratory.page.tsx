@@ -11,8 +11,7 @@ import {NavigationLaboratoryPart} from "./part/Navigation.part.page";
 import {Outlet} from "react-router-dom";
 import {ScreenContext} from "../../context/Screen.context";
 import {useSelector} from "react-redux";
-import {selectListLab, selectListLabReducer} from "../../store/laboratories/laboratories.selector";
-import {selectMember} from "../../store/member/member.selector";
+import {selectLaboratory} from "../../store/laboratory/laboratory.selector";
 
 
 interface Props extends ThemeProps{};
@@ -28,17 +27,10 @@ type LaboratoryTypeParam = {
 
 function Component ( { className } : Props){
   const { t } = useTranslation();
-  const { laboratory } = useParams<LaboratoryTypeParam>();
-  const laboratories = useSelector(selectListLab);
-
-
-  const [ laboratory_, setLaboratory ] = useState<LaboratoryInterface | undefined>(laboratories.find((l)=> l.nameLab === laboratory))
+  const laboratory = useSelector(selectLaboratory);
   const { isWebUI } = useContext(ScreenContext);
   const param = useParams();
 
-  useEffect(() => {
-    setLaboratory(laboratories.find((l)=> l.nameLab === laboratory));
-  }, [laboratories, laboratory]);
 
   return(
    <div className={CN(className, 'laboratory')}>
@@ -47,7 +39,7 @@ function Component ( { className } : Props){
      </div>
      <div className={'__laboratory-body'}>
        <div className={'__laboratory-body-header'}>
-        {!!laboratory_ && <HeaderLaboratory content={laboratory_}/>}
+        {!!laboratory && <HeaderLaboratory />}
          <NavigationLaboratoryPart />
       </div>
        <div className={'__laboratory-body-content'}>
@@ -55,7 +47,7 @@ function Component ( { className } : Props){
           <Outlet />
          </div>
          { isWebUI && param['*'] !== 'about' && <div className={'__laboratory-body-side-bar-right'}>
-           { laboratory_  && <SideBarRightPart content={laboratory_}/> }
+           { laboratory  && <SideBarRightPart content={laboratory}/> }
          </div> }
        </div>
      </div>
